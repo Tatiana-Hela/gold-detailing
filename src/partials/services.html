@@ -1,11 +1,72 @@
 <section class="services">
-    <h2>Послуги Детейлінгу</h2>
-    <p>Наші послуги та ціни</p>
+    <h2 class="services__title">Послуги Детейлінгу</h2>
+    <p class="services__desc">Наші послуги та ціни</p>
     <ul class="services__menu">
-        <li class="services__item">Полірування</li>
-        <li class="services__item">Хімчистка</li>
-        <li class="services__item">Оклейка Плівки</li>
-        <li class="services__item">Кераміка</li>
-        <li class="services__item">Тонування</li>
+        <li class="services__item" onclick="showServiceInfo('Полірування')">Полірування</li>
+        <li class="services__item" onclick="showServiceInfo('Хімчистка')">Хімчистка</li>
+        <li class="services__item" onclick="showServiceInfo('Оклейка Плівки')">Оклейка Плівки</li>
+        <li class="services__item" onclick="showServiceInfo('Кераміка')">Кераміка</li>
+        <li class="services__item" onclick="showServiceInfo('Тонування')">Тонування</li>
     </ul>
+    <div id="service-info">
+        <h3 id="service-title"></h3>
+        <p id="service-description"></p>
+        <p id="service-price"></p>
+        <div id="service-gallery"></div>
+    </div>
 </section>
+
+<script>
+    const serviceData = {
+        "Полірування": {
+            "description": "Детальное описание услуги Полірування",
+            "price": "Цена: 100 грн",
+            "gallery": ["image1.jpg", "image2.jpg"]
+        },
+        "Хімчистка": {
+            "description": "Детальное описание услуги Хімчистка",
+            "price": "Цена: 150 грн",
+            "gallery": ["image3.jpg", "image4.jpg"]
+        },
+        "Оклейка Плівки": {
+            "description": "Детальное описание услуги Оклейка Плівки",
+            "price": "Цена: 200 грн",
+            "gallery": ["image5.jpg", "image6.jpg"]
+        },
+        "Кераміка": {
+            "description": "Детальное описание услуги Кераміка",
+            "price": "Цена: 250 грн",
+            "gallery": ["image7.jpg", "image8.jpg"]
+        },
+        "Тонування": {
+            "description": "Детальное описание услуги Тонування",
+            "price": "Цена: 300 грн",
+            "gallery": ["image9.jpg", "image10.jpg"]
+        }
+    };
+
+    function showServiceInfo(service) {
+        const serviceInfo = document.getElementById("service-info");
+        const serviceTitle = document.getElementById("service-title");
+        const serviceDescription = document.getElementById("service-description");
+        const servicePrice = document.getElementById("service-price");
+        const serviceGallery = document.getElementById("service-gallery");
+
+        serviceTitle.textContent = service;
+        serviceDescription.textContent = serviceData[service].description;
+        servicePrice.textContent = serviceData[service].price;
+
+        // Очистка галереи перед добавлением новых изображений
+        serviceGallery.innerHTML = "";
+
+        // Добавление изображений в галерею
+        const galleryImages = serviceData[service].gallery;
+        for (let i = 0; i < galleryImages.length; i++) {
+            const imgElement = document.createElement("img");
+            imgElement.src = galleryImages[i];
+            serviceGallery.appendChild(imgElement);
+        }
+
+        serviceInfo.style.display = "block"; // Показать информацию о услуге
+    }
+</script>
