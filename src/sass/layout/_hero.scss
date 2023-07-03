@@ -100,16 +100,21 @@
     padding-top: 78px;
     padding-bottom: 78px;
   }
-
   .hero__title {
     margin-bottom: 28px;
     font-size: 64px;
     font-style: normal;
     // font-family: Dela Gothic One;
-    font-weight: 400;
+    // font-weight: 400;
     line-height: 109.3%;
     letter-spacing: -1.28px;
   }
+  .hero__title-city {
+    color: var(--white);
+    display: block;
+    text-align: center;
+  }
+
   .hero__desc {
     margin-bottom: 12px;
     font-size: 24px;
