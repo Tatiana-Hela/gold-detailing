@@ -1,0 +1,127 @@
+.hero-container {
+  padding-top: 136px;
+  padding-bottom: 136px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .hero-container {
+    background: url('../images/hero/close-up-on-car-care-process-mobile.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2),
+  screen and (max-width: 767px) and (min-resolution: 192dpi),
+  screen and (max-width: 767px) and (min-resolution: 2dppx) {
+  .hero-container {
+    background: url('../images/hero/close-up-on-car-care-process-mobile@2x.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-container {
+    background: url('../images/hero/close-up-on-car-care-process-tablet.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 768px) and (min-resolution: 192dpi),
+  screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero-container {
+    background: url('../images/hero/close-up-on-car-care-process-tablet@2x.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-container {
+    background: url('../images/hero/close-up-on-car-care-process-desktop.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 1200px) and (min-resolution: 192dpi),
+  screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero-container {
+    background: url('../images/hero/close-up-on-car-care-process-desktop@2x.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.hero__title {
+  margin-bottom: 16px;
+
+  color: var(--gold);
+  font-size: 32px;
+  font-weight: 700;
+}
+.hero__desc {
+  margin-bottom: 16px;
+
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 400;
+}
+.hero__btn {
+  color: var(--black-100);
+  font-size: 16px;
+  font-weight: 500;
+
+  margin-top: 24px;
+  display: flex;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 40px;
+  background: var(--gold);
+}
+
+@media screen and (min-width: 768px) {
+  .hero-container {
+    padding-top: 78px;
+    padding-bottom: 78px;
+  }
+
+  .hero__title {
+    margin-bottom: 28px;
+    font-size: 64px;
+    font-style: normal;
+    // font-family: Dela Gothic One;
+    font-weight: 400;
+    line-height: 109.3%;
+    letter-spacing: -1.28px;
+  }
+  .hero__desc {
+    margin-bottom: 12px;
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__btn {
+    display: none;
+  }
+  .hero-container {
+    padding-top: 147px;
+    padding-bottom: 145px;
+  }
+}
