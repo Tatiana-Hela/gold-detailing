@@ -1,31 +1,41 @@
 .hero-container {
-  padding-top: 136px;
-  padding-bottom: 136px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-@media screen and (max-width: 767px) {
-  .hero-container {
-    background: url('../images/hero/close-up-on-car-care-process-mobile.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.hero__photo {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__photo {
+    display: none;
   }
 }
 
-@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2),
-  screen and (max-width: 767px) and (min-resolution: 192dpi),
-  screen and (max-width: 767px) and (min-resolution: 2dppx) {
-  .hero-container {
-    background: url('../images/hero/close-up-on-car-care-process-mobile@2x.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
+// @media screen and (max-width: 767px) {
+//   .hero-container {
+//     background: url('../images/hero/close-up-on-car-care-process-mobile.png');
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//   }
+// }
+
+// @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2),
+//   screen and (max-width: 767px) and (min-resolution: 192dpi),
+//   screen and (max-width: 767px) and (min-resolution: 2dppx) {
+//   .hero-container {
+//     background: url('../images/hero/close-up-on-car-care-process-mobile@2x.png');
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//   }
+// }
 
 @media screen and (min-width: 768px) {
   .hero-container {
@@ -67,14 +77,17 @@
 }
 
 .hero__title {
-  margin-bottom: 16px;
-
+  margin-bottom: 20px;
   color: var(--gold);
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 28px;
+  font-family: Dela Gothic One;
+  font-weight: 800;
+}
+.hero__title-city {
+  color: var(--white);
 }
 .hero__desc {
-  margin-bottom: 16px;
+  margin-bottom: 4px;
 
   color: var(--white);
   font-size: 18px;
@@ -85,7 +98,7 @@
   font-size: 16px;
   font-weight: 500;
 
-  margin-top: 24px;
+  margin-top: 16px;
   display: flex;
   padding: 16px 32px;
   justify-content: center;
@@ -94,18 +107,25 @@
   border-radius: 40px;
   background: var(--gold);
 }
+.btn-icon {
+  margin-left: 8px;
+  display: block;
+  fill: var(--black-100);
+  width: 32px;
+  height: 32px;
+}
 
 @media screen and (min-width: 768px) {
   .hero-container {
-    padding-top: 78px;
-    padding-bottom: 78px;
+    padding-top: 71px;
+    padding-bottom: 71px;
   }
   .hero__title {
     margin-bottom: 28px;
     font-size: 64px;
     font-style: normal;
-    // font-family: Dela Gothic One;
-    // font-weight: 400;
+    font-family: Dela Gothic One;
+    font-weight: 400;
     line-height: 109.3%;
     letter-spacing: -1.28px;
   }

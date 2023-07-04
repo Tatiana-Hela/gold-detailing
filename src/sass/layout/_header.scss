@@ -1,0 +1,48 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.logo {
+  display: flex;
+  margin-left: 82px;
+}
+
+.btn-burger {
+  display: flex;
+  margin-left: auto;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--black-100);
+  z-index: 9999;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 22px 20px 40px 20px;
+  box-sizing: border-box;
+}
+
+.menu-list {
+  margin-top: 56px;
+  font-size: 16px;
+  font-family: Inter;
+}
+
+.menu-list-item {
+  margin-bottom: 20px;
+}
+
+.btn-close {
+  position: absolute;
+  top: 22px;
+  right: 16px;
+}
