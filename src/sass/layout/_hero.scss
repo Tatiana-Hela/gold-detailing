@@ -61,7 +61,9 @@
   color: var(--gold);
   font-size: 28px;
   font-family: Dela Gothic One;
-  font-weight: 800;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 .hero__title-city {
   color: var(--white);
@@ -73,37 +75,79 @@
   font-size: 18px;
   font-weight: 400;
 }
+
+// .hero__btn {
+//   color: var(--black-100);
+//   font-size: 16px;
+//   font-weight: 500;
+
+//   margin-top: 16px;
+//   display: flex;
+//   padding: 16px 32px;
+//   justify-content: center;
+//   align-items: center;
+//   border-radius: 40px;
+//   background: var(--gold);
+
+//   &:hover,
+//   &:focus {
+//     background: var(--black-100);
+//     color: var(--gold);
+//   }
+// }
+// .btn-icon {
+//   margin-left: 8px;
+//   display: block;
+//   fill: var(--black-100);
+//   width: 32px;
+//   height: 32px;
+//   transition: fill var(--transition-dur-and-func);
+
+//   .hero__btn:hover &,
+//   .hero__btn:focus & {
+//     fill: var(--gold);
+//   }
+// }
+
+$primary-color: var(--gold);
+$secondary-color: var(--black-100);
+
 .hero__btn {
-  color: var(--black-100);
+  color: $secondary-color;
   font-size: 16px;
   font-weight: 500;
-
   margin-top: 16px;
   display: flex;
   padding: 16px 32px;
   justify-content: center;
   align-items: center;
-
   border-radius: 40px;
-  background: var(--gold);
+  background: $primary-color;
+  transition: background-color 0.5s;
 
   &:hover,
   &:focus {
-    background: var(--black-100);
-    color: var(--gold);
+    background: $secondary-color;
+    color: $primary-color;
   }
-}
-.btn-icon {
-  margin-left: 8px;
-  display: block;
-  fill: var(--black-100);
-  width: 32px;
-  height: 32px;
-  transition: fill var(--transition-dur-and-func);
 
-  .hero__btn:hover &,
-  .hero__btn:focus & {
-    fill: var(--gold);
+  &.active {
+    background: $secondary-color;
+    color: $primary-color;
+  }
+
+  .btn-icon {
+    margin-left: 8px;
+    display: block;
+    fill: $secondary-color;
+    width: 32px;
+    height: 32px;
+    transition: fill var(--transition-dur-and-func);
+  }
+
+  &:hover .btn-icon,
+  &.active .btn-icon {
+    fill: $primary-color;
   }
 }
 

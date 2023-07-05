@@ -102,6 +102,15 @@
   .menu-overlay {
     padding: 20px 22px;
   }
+  .mobile-social-icon {
+    fill: var(--white);
+    transition: fill var(--transition-dur-and-func);
+
+    .mobile-social-item:hover &,
+    .mobile-social-item:focus & {
+      fill: var(--gold-80);
+    }
+  }
   .header-address {
     font-size: 16px;
     font-weight: 400;
