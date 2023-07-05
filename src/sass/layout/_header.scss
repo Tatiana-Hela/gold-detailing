@@ -8,6 +8,7 @@
 
 .logo {
   display: flex;
+  cursor: pointer;
 }
 
 .btn-burger {
@@ -79,12 +80,14 @@
 .header-address {
   display: none;
 }
-
+.nav-menu-list {
+  display: none;
+}
 @media screen and (min-width: 768px) {
   .mobile-menu-list {
-    margin-top: 0;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     border-top: 1px solid var(--white);
     display: flex;
     justify-content: space-between;
@@ -96,12 +99,44 @@
     font-size: 16px;
     font-weight: 400;
     margin-top: 8px;
-    margin-bottom: 20px;
     display: flex;
+    cursor: pointer;
+    color: var(--white);
+    transition: color var(--transition-dur-and-func);
+    &:hover,
+    &:focus {
+      color: var(--gold);
+    }
   }
   .phone-icon-link {
+    display: flex;
     position: absolute;
-    top: 16px;
+    top: 38px;
     right: 76px;
+  }
+  .btn-close {
+    top: 36px;
+  }
+  .header-container {
+    height: 105px;
+  }
+  .nav-menu-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid var(--white);
+  }
+  .nav-menu-list-item {
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    color: var(--white);
+    transition: color var(--transition-dur-and-func);
+    &:hover,
+    &:focus {
+      color: var(--gold);
+    }
   }
 }
