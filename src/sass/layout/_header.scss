@@ -8,7 +8,6 @@
 
 .logo {
   display: flex;
-  margin-left: 82px;
 }
 
 .btn-burger {
@@ -21,28 +20,88 @@
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
   background-color: var(--black-100);
   z-index: 9999;
   display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 22px 20px 40px 20px;
-  box-sizing: border-box;
+  padding: 22px 16px 40px 16px;
 }
 
-.menu-list {
+.mobile-menu-list {
   margin-top: 56px;
   font-size: 16px;
   font-family: Inter;
 }
 
-.menu-list-item {
+.mobile-menu-list-item {
   margin-bottom: 20px;
 }
 
 .btn-close {
   position: absolute;
-  top: 22px;
+  top: 16px;
   right: 16px;
+}
+.phone-icon-link {
+  display: none;
+}
+
+.mobile-contacts-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.mobile-contacts-title {
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.mobile-social-list {
+  margin-bottom: 40px;
+  display: flex;
+  gap: 24px;
+}
+.mobile-contacts-phone {
+  margin-bottom: 8px;
+  color: var(--gold);
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.mobile-work-schedule {
+  color: var(--gold);
+  font-size: 16px;
+  font-weight: 400;
+}
+.header-address {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu-list {
+    margin-top: 0;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-top: 1px solid var(--white);
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu-overlay {
+    padding: 20px 22px;
+  }
+  .header-address {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    display: flex;
+  }
+  .phone-icon-link {
+    position: absolute;
+    top: 16px;
+    right: 76px;
+  }
 }
