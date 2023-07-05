@@ -17,27 +17,7 @@
   }
 }
 
-// @media screen and (max-width: 767px) {
-//   .hero-container {
-//     background: url('../images/hero/close-up-on-car-care-process-mobile.png');
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//   }
-// }
-
-// @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2),
-//   screen and (max-width: 767px) and (min-resolution: 192dpi),
-//   screen and (max-width: 767px) and (min-resolution: 2dppx) {
-//   .hero-container {
-//     background: url('../images/hero/close-up-on-car-care-process-mobile@2x.png');
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//   }
-// }
-
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) and(max-width: 1199px) {
   .hero-container {
     background: url('../images/hero/close-up-on-car-care-process-tablet.png');
     background-repeat: no-repeat;
@@ -45,9 +25,9 @@
   }
 }
 
-@media screen and (max-width: 1199px) and (min-device-pixel-ratio: 2),
-  screen and (max-width: 1199px) and (min-resolution: 192dpi),
-  screen and (max-width: 1199px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 768px) and(max-width: 1199px) and (min-resolution: 192dpi),
+  screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
   .hero-container {
     background: url('../images/hero/close-up-on-car-care-process-tablet@2x.png');
     background-position: center;
