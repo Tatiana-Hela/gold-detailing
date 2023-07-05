@@ -86,6 +86,12 @@
 
   border-radius: 40px;
   background: var(--gold);
+
+  &:hover,
+  &:focus {
+    background: var(--black-100);
+    color: var(--gold);
+  }
 }
 .btn-icon {
   margin-left: 8px;
@@ -93,6 +99,12 @@
   fill: var(--black-100);
   width: 32px;
   height: 32px;
+  transition: fill var(--transition-dur-and-func);
+
+  .hero__btn:hover &,
+  .hero__btn:focus & {
+    fill: var(--gold);
+  }
 }
 
 @media screen and (min-width: 768px) {

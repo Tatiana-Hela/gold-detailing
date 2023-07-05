@@ -39,6 +39,13 @@
 
 .mobile-menu-list-item {
   margin-bottom: 20px;
+  color: var(--white);
+  transition: color var(--transition-dur-and-func);
+  &:hover,
+  &:focus {
+    color: var(--gold);
+    text-shadow: 0px 0px 4px 0px var(--gold);
+  }
 }
 
 .btn-close {
@@ -106,6 +113,7 @@
     &:hover,
     &:focus {
       color: var(--gold);
+      text-shadow: 0px 0px 4px 0px var(--gold);
     }
   }
   .phone-icon-link {
@@ -137,6 +145,7 @@
     &:hover,
     &:focus {
       color: var(--gold);
+      text-shadow: 0px 0px 4px 0px var(--gold);
     }
   }
 }
