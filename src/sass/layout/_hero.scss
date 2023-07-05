@@ -6,6 +6,11 @@
   justify-content: center;
   align-items: center;
 }
+.hero-section {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .hero__photo {
   width: 100%;
@@ -109,11 +114,8 @@
 //   }
 // }
 
-$primary-color: var(--gold);
-$secondary-color: var(--black-100);
-
 .hero__btn {
-  color: $secondary-color;
+  color: var(--black-100);
   font-size: 16px;
   font-weight: 500;
   margin-top: 16px;
@@ -122,24 +124,24 @@ $secondary-color: var(--black-100);
   justify-content: center;
   align-items: center;
   border-radius: 40px;
-  background: $primary-color;
+  background: var(--gold);
   transition: background-color 0.5s;
 
   &:hover,
   &:focus {
-    background: $secondary-color;
-    color: $primary-color;
+    background: var(--black-100);
+    color: var(--gold);
   }
 
   &.active {
-    background: $secondary-color;
-    color: $primary-color;
+    background: var(--black-100);
+    color: var(--gold);
   }
 
   .btn-icon {
     margin-left: 8px;
     display: block;
-    fill: $secondary-color;
+    fill: var(--black-100);
     width: 32px;
     height: 32px;
     transition: fill var(--transition-dur-and-func);
@@ -147,7 +149,7 @@ $secondary-color: var(--black-100);
 
   &:hover .btn-icon,
   &.active .btn-icon {
-    fill: $primary-color;
+    fill: var(--gold);
   }
 }
 
