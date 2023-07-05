@@ -145,4 +145,16 @@
   .btn-burger {
     display: none;
   }
+  .nav-menu-list {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  .header-container {
+    height: 94px;
+  }
+  .header-wrapper-adrress {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
 }
