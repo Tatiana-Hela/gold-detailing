@@ -140,3 +140,9 @@
     }
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .btn-burger {
+    display: none;
+  }
+}
