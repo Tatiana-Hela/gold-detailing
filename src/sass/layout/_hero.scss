@@ -14,6 +14,7 @@
 
 .hero__photo {
   width: 100%;
+  min-height: 314px;
 }
 
 @media screen and (min-width: 768px) {
@@ -125,32 +126,25 @@
   align-items: center;
   border-radius: 40px;
   background: var(--gold);
-  transition: background-color 0.5s;
+  transition: background var(--transition-dur-and-func);
+}
 
-  &:hover,
-  &:focus {
-    background: var(--black-100);
-    color: var(--gold);
-  }
+.hero__btn.active {
+  background: var(--black-100);
+  color: var(--gold);
+}
 
-  &.active {
-    background: var(--black-100);
-    color: var(--gold);
-  }
+.hero__btn .btn-icon {
+  margin-left: 8px;
+  display: block;
+  fill: var(--black-100);
+  width: 32px;
+  height: 32px;
+  transition: fill var(--transition-dur-and-func);
+}
 
-  .btn-icon {
-    margin-left: 8px;
-    display: block;
-    fill: var(--black-100);
-    width: 32px;
-    height: 32px;
-    transition: fill var(--transition-dur-and-func);
-  }
-
-  &:hover .btn-icon,
-  &.active .btn-icon {
-    fill: var(--gold);
-  }
+.hero__btn.active .btn-icon {
+  fill: var(--gold);
 }
 
 @media screen and (min-width: 768px) {

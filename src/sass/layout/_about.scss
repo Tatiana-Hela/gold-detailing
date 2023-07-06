@@ -28,6 +28,7 @@
 .about__photo {
   width: 100%;
   border-radius: 4px;
+  object-fit: cover;
 }
 
 @media screen and (min-width: 768px) {
@@ -42,22 +43,31 @@
     font-size: 24px;
   }
   .about__photo {
-    width: 332px;
+    min-width: 332px;
+    min-height: 271px;
   }
   .about__desc-card {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
     margin-bottom: 40px;
+  }
+
+  .about__desc-card > * {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
   }
   .about__desc-card-two {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
+    margin-bottom: 40px;
+  }
+  .about__desc-card-two > * {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
   }
   .about__desc {
     margin-top: 0;
@@ -76,7 +86,8 @@
 
 @media screen and (min-width: 1200px) {
   .about__photo {
-    width: 570px;
+    min-width: 570px;
+    min-height: 500px;
   }
   .about__desc-card {
     flex-direction: row;
