@@ -27,7 +27,20 @@
 
   <script type="module" src="./js/active-btn.js"></script>
   <script type="module" src="./js/mobile-menu.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const sliderItems = document.querySelectorAll('.slider-car__item');
+
+      sliderItems.forEach(function (item) {
+        item.addEventListener('click', function () {
+          sliderItems.forEach(function (item) {
+            item.classList.remove('active');
+          });
+          this.classList.add('active');
+        });
+      });
+    });
+  </script>
 
 </body>
 
