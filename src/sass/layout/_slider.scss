@@ -1,0 +1,16 @@
+.slider-car {
+  display: none;
+}
+.slider-car__photo {
+  width: 790px;
+  height: 700px;
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 1200px) {
+  .slider-car {
+    display: block;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
