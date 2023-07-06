@@ -24,3 +24,68 @@
   font-size: 18px;
   font-weight: 500;
 }
+
+.about__photo {
+  width: 100%;
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .about {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .about__title {
+    font-size: 40px;
+  }
+  .about__desc-our-mission {
+    font-size: 24px;
+  }
+  .about__photo {
+    width: 332px;
+  }
+  .about__desc-card {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  .about__desc-card-two {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  .about__desc {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .about__desc-wrapper {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .about__desc-our-mission {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about__photo {
+    width: 570px;
+  }
+  .about__desc-card {
+    flex-direction: row;
+  }
+  .about__desc-card-two {
+    flex-direction: row-reverse;
+  }
+  .about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
