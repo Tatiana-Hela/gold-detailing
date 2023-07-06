@@ -72,6 +72,15 @@
   display: flex;
   gap: 24px;
 }
+.mobile-social-icon {
+  fill: var(--white);
+  transition: fill var(--transition-dur-and-func);
+}
+
+.mobile-social-item:hover .mobile-social-icon,
+.mobile-social-item:focus .mobile-social-icon {
+  fill: var(--gold-80);
+}
 .mobile-contacts-phone {
   margin-bottom: 8px;
   color: var(--gold);
