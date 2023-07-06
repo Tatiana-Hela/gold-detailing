@@ -5,14 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gold Detailing</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./images/font/stylesheet.css" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./images/font/stylesheet.css" type="text/css" />
   <link rel="stylesheet" href="./sass/index.scss" />
-
 </head>
-
 
 <body>
   <!-- ❗️❗️❗️ Add partials like so for every page -->
@@ -24,24 +22,9 @@
   <include src="./partials/about.html"></include>
   <include src="./partials/services.html"></include>
 
-
   <script type="module" src="./js/active-btn.js"></script>
   <script type="module" src="./js/mobile-menu.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const sliderItems = document.querySelectorAll('.slider-car__item');
-
-      sliderItems.forEach(function (item) {
-        item.addEventListener('click', function () {
-          sliderItems.forEach(function (item) {
-            item.classList.remove('active');
-          });
-          this.classList.add('active');
-        });
-      });
-    });
-  </script>
-
+  <script type="module" src="./js/slider-car.js"></script>
 </body>
 
 </html>
