@@ -1,0 +1,26 @@
+.gallery {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+.gallery__title {
+  color: var(--gold-80);
+  font-family: Dela Gothic One;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+.gallery__desc {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.gallery__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.gallery__photo {
+  border-radius: 4px;
+  overflow: hidden;
+}

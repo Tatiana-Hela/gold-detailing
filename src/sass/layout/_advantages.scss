@@ -7,6 +7,7 @@
 .advantages__menu {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 20px;
 }
 
@@ -47,6 +48,7 @@
   }
   .advantages__item {
     width: 352px;
+    height: auto;
   }
 }
 @media screen and (min-width: 1200px) {
