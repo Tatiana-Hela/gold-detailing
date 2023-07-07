@@ -17,10 +17,25 @@
 .gallery__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   gap: 20px;
 }
+
+.gallery__item {
+  flex-basis: calc(50% - 10px);
+}
+
 .gallery__photo {
+  width: 100%;
+  height: auto;
   border-radius: 4px;
   overflow: hidden;
+}
+
+.gallery__fullscreen {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
