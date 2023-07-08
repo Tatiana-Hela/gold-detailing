@@ -81,7 +81,7 @@
   .STO-services__details {
     display: inline-block;
     font-size: 16px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
   .STO-services__wrapper {
     display: flex;
@@ -91,5 +91,8 @@
   }
   .STO-services__photo {
     min-width: 590px;
+  }
+  .STO-services__advantages__menu {
+    margin-bottom: 0;
   }
 }
