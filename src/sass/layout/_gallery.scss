@@ -1,6 +1,6 @@
 .gallery {
   padding-top: 64px;
-  padding-bottom: 24px;
+  padding-bottom: 94px;
 }
 .gallery__title {
   color: var(--gold-80);
@@ -35,12 +35,16 @@
 .gallery__item {
   flex-shrink: 0;
   margin: 0 10px;
+  &:hover,
+  &:focus {
+    transform: scaleX(1.1);
+  }
 }
-.gallery__slider-small .slick-slide.slick-current {
-  margin-right: 30px;
-  border-radius: 4px;
-  transform: scale(1.2);
-}
+// .gallery__slider-small .slick-slide.slick-current {
+//   margin-right: 30px;
+//   border-radius: 4px;
+//   transform: scale(1.2);
+// }
 .gallery__slider-big {
   display: flex;
   justify-content: center;
@@ -69,32 +73,54 @@
 .slick-track {
   height: auto;
 }
-.slick-prev,
+
 .slick-next {
   position: absolute;
-  margin-top: 100px;
+  margin-top: 200px;
   font-size: 24px;
   line-height: 1;
   z-index: 1;
   cursor: pointer;
-  background: none;
   border: none;
+  margin-left: 60px;
+}
+.slick-prev {
+  position: absolute;
+  margin-top: 200px;
+  font-size: 24px;
+  line-height: 1;
+  z-index: 1;
+  cursor: pointer;
+  border: none;
+  margin-right: 40px;
 }
 
 .slick-prev svg {
-  margin-right: 60px;
+  width: 32px;
+  height: 32px;
+  fill: var(--gold-80);
+  background-color: #151206;
+  border-radius: 50%;
+  z-index: 2;
+  transition: fill var(--transition-dur-and-func);
+  &:hover,
+  &:focus {
+    fill: var(--gold);
+    transform: scale(1.1);
+  }
 }
-.slick-next svg {
-  margin-left: 60px;
-}
-
-.slick-prev svg,
 .slick-next svg {
   width: 32px;
   height: 32px;
   fill: var(--gold-80);
   background-color: #151206;
   border-radius: 50%;
+  transition: fill var(--transition-dur-and-func);
+  &:hover,
+  &:focus {
+    fill: var(--gold);
+    transform: scale(1.1);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -104,7 +130,13 @@
   }
   .gallery {
     padding-top: 80px;
-    padding-bottom: 104px;
+    padding-bottom: 124px;
+  }
+  .gallery__title {
+    font-size: 40px;
+  }
+  .gallery__desc {
+    font-size: 24px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -118,10 +150,10 @@
   }
   .slick-prev,
   .slick-next {
-    margin-top: 160px;
+    margin-top: 260px;
   }
   .gallery {
     padding-top: 100px;
-    padding-bottom: 60px;
+    padding-bottom: 144px;
   }
 }
