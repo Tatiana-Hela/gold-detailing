@@ -1,0 +1,105 @@
+.social-media {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.social-media__title {
+  font-family: Dela Gothic One;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+.social-media__title-we {
+  color: var(--gold-80);
+}
+.social-media__desc {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+.social-media__desc-join {
+  color: var(--gold-80);
+}
+.social-media__mockup {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+.social-media__description-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.social-media__description-text {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.social-media__description-list {
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+.social-media__description-item {
+  font-size: 16px;
+  font-weight: 500;
+}
+.social-media__button-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.social-media__button-item {
+  width: 100%;
+}
+.social-media__button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  align-items: center;
+  border-bottom: 1px solid var(--gold-80);
+
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.social-media__button-icon {
+  fill: var(--white);
+}
+@media screen and (min-width: 768px) {
+  .social-media {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .social-media__title {
+    font-size: 40px;
+  }
+  .social-media__desc {
+    font-size: 24px;
+  }
+  .social-media__mockup {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .social-media {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .social-media__desc-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .social-media__description-wrapper {
+    width: 590px;
+  }
+  .social-media__mockup {
+    width: 590px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}

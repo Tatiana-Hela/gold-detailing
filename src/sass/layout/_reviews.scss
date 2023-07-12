@@ -34,8 +34,8 @@
   padding: 20px;
   border-radius: 8px;
   background: var(--black-100);
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .reviews__card-item-name {
@@ -90,11 +90,13 @@
 @media screen and (min-width: 768px) {
   .reviews {
     padding-top: 80px;
-    padding-bottom: 104px;
+    padding-bottom: 124px;
   }
   .reviews__card-item {
     width: 576px;
     height: 477px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
   .reviews__card-item-photo {
     width: 536;
@@ -124,7 +126,7 @@
 @media screen and (min-width: 1200px) {
   .reviews {
     padding-top: 100px;
-    padding-bottom: 134px;
+    padding-bottom: 144px;
   }
   .reviews__card-list .slick-prev {
     position: absolute;
