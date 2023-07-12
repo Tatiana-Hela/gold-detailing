@@ -40,11 +40,7 @@
     transform: scaleX(1.1);
   }
 }
-// .gallery__slider-small .slick-slide.slick-current {
-//   margin-right: 30px;
-//   border-radius: 4px;
-//   transform: scale(1.2);
-// }
+
 .gallery__slider-big {
   display: flex;
   justify-content: center;
@@ -146,7 +142,10 @@
   }
   .gallery__slider-small .slick-slide img {
     width: 100%;
-    height: 180px;
+    height: 160px;
+  }
+  .gallery__slider-small .slick-track {
+    height: 200px;
   }
   .slick-prev,
   .slick-next {
@@ -155,5 +154,8 @@
   .gallery {
     padding-top: 100px;
     padding-bottom: 144px;
+  }
+  .gallery__slider-big {
+    margin-bottom: 40px;
   }
 }
