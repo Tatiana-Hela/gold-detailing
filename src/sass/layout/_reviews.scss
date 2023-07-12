@@ -1,9 +1,16 @@
 .reviews {
+  background: var(--black-gold);
   padding-top: 64px;
   padding-bottom: 84px;
-  background: var(--black-gold);
+}
+
+.reviews-container.container {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 1600px;
 }
 .reviews__title {
+  padding-left: 16px;
   font-family: Dela Gothic One;
   font-size: 24px;
   font-weight: 400;
@@ -13,6 +20,7 @@
   color: var(--gold-80);
 }
 .reviews__desc {
+  padding-left: 16px;
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 20px;
@@ -22,11 +30,14 @@
 }
 .reviews__card-item {
   width: 303px;
-  height: 450px;
+  height: 500px;
   padding: 20px;
   border-radius: 8px;
   background: var(--black-100);
+  margin-left: 20px;
+  margin-right: 20px;
 }
+
 .reviews__card-item-name {
   font-size: 24px;
   font-weight: 700;
@@ -45,7 +56,7 @@
   margin-bottom: 20px;
 }
 .reviews__card-item-photo {
-  width: 100%;
+  width: 303px;
   height: 150px;
   border-radius: 8px;
   object-fit: cover;
@@ -65,4 +76,81 @@
   position: absolute;
   top: 63%;
   right: 35%;
+}
+.reviews__card-list.slick-slider .slick-slide {
+  opacity: 0.3;
+  transition: opacity var(--transition-dur-and-func);
+}
+.reviews__card-list.slick-slider .slick-current,
+.reviews__card-list.slick-slider .slick-active {
+  opacity: 1;
+  transition: opacity var(--transition-dur-and-func);
+}
+
+@media screen and (min-width: 768px) {
+  .reviews {
+    padding-top: 80px;
+    padding-bottom: 104px;
+  }
+  .reviews__card-item {
+    width: 576px;
+    height: 477px;
+  }
+  .reviews__card-item-photo {
+    width: 536;
+    height: 236px;
+  }
+  .reviews__title {
+    padding-left: 22px;
+    font-size: 40px;
+  }
+  .reviews__desc {
+    padding-left: 22px;
+    font-size: 24px;
+    margin-bottom: 48px;
+  }
+  .reviews__card-list .slick-prev {
+    position: absolute;
+    top: 65%;
+    left: 43%;
+  }
+  .reviews__card-list .slick-next {
+    position: absolute;
+    top: 65%;
+    right: 43%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .reviews {
+    padding-top: 100px;
+    padding-bottom: 134px;
+  }
+  .reviews__card-list .slick-prev {
+    position: absolute;
+    top: 52%;
+    left: 46%;
+  }
+  .reviews__card-list .slick-next {
+    position: absolute;
+    top: 52%;
+    right: 46%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .reviews__title {
+    padding-left: 10%;
+  }
+  .reviews__desc {
+    padding-left: 10%;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .reviews__title {
+    padding-left: 14%;
+  }
+  .reviews__desc {
+    padding-left: 14%;
+  }
 }
