@@ -46,6 +46,18 @@
   align-items: flex-start;
   gap: 20px;
 }
+.footer-menu-list-item {
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  color: var(--white);
+  transition: color var(--transition-dur-and-func);
+  &:hover,
+  &:focus {
+    color: var(--gold);
+    text-shadow: 0px 0px 4px 0px var(--gold);
+  }
+}
 .footer__google-maps {
   display: none;
 }
