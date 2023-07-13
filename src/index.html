@@ -12,6 +12,8 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
   <link rel="stylesheet" href="./sass/index.scss" />
 </head>
 
@@ -31,12 +33,22 @@
   <include src="./partials/lounge-zone.html"></include>
   <include src="./partials/reviews.html"></include>
   <include src="./partials/social-media.html"></include>
+  <include src="./partials/footer.html"></include>
 
   <script type="module" src="./js/mobile-menu.js"></script>
   <script type="module" src="./js/slider-car.js"></script>
   <script type="module" src="./js/gallery-slider.js"></script>
   <script type="module" src="./js/reviews-slider.js"></script>
 
+  <script>
+    var map = L.map("map").setView([50.431860, 30.359328], 13); // Установка центра карты на Киеве
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 20,
+    }).addTo(map);
+
+    // Добавление маркера с адресом
+    var marker = L.marker([50.431860, 30.359328]).addTo(map);
+  </script>
 </body>
 
 </html>
