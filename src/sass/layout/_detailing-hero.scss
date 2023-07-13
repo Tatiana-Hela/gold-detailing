@@ -25,7 +25,7 @@
 
 @media screen and (min-width: 768px) and(max-width: 1199px) {
   .hero-container {
-    background: url('../images/hero/close-up-on-car-care-process-tablet.jpg');
+    background: url('../images/detailing-hero/hero-tablet.jpg');
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -35,7 +35,7 @@
   screen and (min-width: 768px) and(max-width: 1199px) and (min-resolution: 192dpi),
   screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
   .hero-container {
-    background: url('../images/hero/close-up-on-car-care-process-tablet@2x.jpg');
+    background: url('../images/detailing-hero/hero-tablet@2x.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -44,7 +44,7 @@
 
 @media screen and (min-width: 1200px) {
   .hero-section {
-    background: url('../images/hero/close-up-on-car-care-process-desktop.jpg');
+    background: url('../images/detailing-hero/hero-desktop.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -55,7 +55,7 @@
   screen and (min-width: 1200px) and (min-resolution: 192dpi),
   screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero-section {
-    background: url('../images/hero/close-up-on-car-care-process-desktop@2x.jpg');
+    background: url('../images/detailing-hero/hero-desktop@2x.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -63,14 +63,15 @@
 }
 
 .hero__title {
-  text-align: center;
   margin-bottom: 20px;
   color: var(--gold);
   font-size: 28px;
   font-family: Dela Gothic One;
+  font-style: normal;
   font-weight: 400;
+  line-height: 112.8%;
 }
-.hero__title-city {
+.hero__title-detailing {
   color: var(--white);
 }
 .hero__desc {
@@ -156,9 +157,10 @@
     font-size: 64px;
     font-family: Dela Gothic One;
     font-weight: 400;
-    line-height: 108.3%;
+    line-height: 109.3%;
+    letter-spacing: -1.28px;
   }
-  .hero__title-city {
+  .hero__title-detailing {
     color: var(--white);
     display: block;
     text-align: center;
@@ -179,9 +181,9 @@
     padding-bottom: 145px;
   }
   .hero__title {
-    margin-bottom: 28px;
-    font-size: 64px;
-    font-family: Dela Gothic One;
-    font-weight: 400;
+    line-height: normal;
+  }
+  .hero__title-detailing {
+    display: inline;
   }
 }
