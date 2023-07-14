@@ -62,6 +62,12 @@
   color: var(--gold);
   font-size: 16px;
   font-weight: 400;
+  border-bottom: none;
+  transition: border-bottom var(--transition-dur-and-func);
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid var(--gold);
+  }
 }
 
 .footer__location-links {

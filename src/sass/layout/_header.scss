@@ -131,11 +131,11 @@
     display: flex;
     cursor: pointer;
     color: var(--white);
+    border-bottom: none;
     transition: color var(--transition-dur-and-func);
     &:hover,
     &:focus {
-      color: var(--gold);
-      text-shadow: 0px 0px 4px 0px var(--gold);
+      border-bottom: 1px solid var(--white);
     }
   }
   .phone-icon-link {

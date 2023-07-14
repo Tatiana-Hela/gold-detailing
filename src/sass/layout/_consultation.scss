@@ -10,7 +10,6 @@
   font-weight: 500;
   margin-bottom: 8px;
 }
-/* Общие стили кнопки */
 .consultation__btn {
   color: var(--black-100);
   margin-left: auto;
@@ -28,7 +27,6 @@
   position: relative;
 }
 
-/* Анимация на мобильных устройствах */
 @media (max-width: 768px) {
   .consultation__btn::after {
     content: '';
