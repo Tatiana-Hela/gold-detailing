@@ -23,7 +23,7 @@
   }
 }
 
-@media screen and (min-width: 768px) and(max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero-container {
     background: url('../images/hero/close-up-on-car-care-process-tablet.jpg');
     background-repeat: no-repeat;
@@ -32,7 +32,7 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2),
-  screen and (min-width: 768px) and(max-width: 1199px) and (min-resolution: 192dpi),
+  screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi),
   screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
   .hero-container {
     background: url('../images/hero/close-up-on-car-care-process-tablet@2x.jpg');

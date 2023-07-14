@@ -1,4 +1,4 @@
-.hero-container {
+.detailing-hero-container {
   padding-top: 40px;
   padding-bottom: 40px;
   display: flex;
@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
 }
-.hero-section {
+.detailing-hero-section {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
@@ -23,8 +23,8 @@
   }
 }
 
-@media screen and (min-width: 768px) and(max-width: 1199px) {
-  .hero-container {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .detailing-hero-container {
     background: url('../images/detailing-hero/hero-tablet.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -32,9 +32,9 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2),
-  screen and (min-width: 768px) and(max-width: 1199px) and (min-resolution: 192dpi),
+  screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi),
   screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
-  .hero-container {
+  .detailing-hero-container {
     background: url('../images/detailing-hero/hero-tablet@2x.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -43,7 +43,7 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .hero-section {
+  .detailing-hero-section {
     background: url('../images/detailing-hero/hero-desktop.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -54,7 +54,7 @@
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
   screen and (min-width: 1200px) and (min-resolution: 192dpi),
   screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .hero-section {
+  .detailing-hero-section {
     background: url('../images/detailing-hero/hero-desktop@2x.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -148,7 +148,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .hero-container {
+  .detailing-hero-container {
     padding-top: 71px;
     padding-bottom: 71px;
   }
@@ -176,7 +176,7 @@
   .hero__btn {
     display: none;
   }
-  .hero-container {
+  .detailing-hero-container {
     padding-top: 147px;
     padding-bottom: 145px;
   }
