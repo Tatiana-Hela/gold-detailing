@@ -11,18 +11,42 @@
 .about__title-two {
   color: var(--gold-80);
 }
-.about__desc {
-  margin-top: 20px;
+.about__desc-title {
+  color: var(--gold);
+  font-size: 24px;
+  font-weight: 500;
+}
+.about__desc-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
   margin-bottom: 20px;
+}
+.about__desc {
   font-size: 16px;
   font-weight: 400;
+}
+.about__desc-gold {
+  color: var(--gold);
 }
 .about__desc-mission {
   color: var(--gold-80);
 }
+.about__desc-number {
+  font-size: 80px;
+  font-weight: 900;
+  color: var(--gold);
+  -webkit-text-fill-color: transparent; /* Заполняем текст прозрачным цветом */
+  -webkit-text-stroke: 1px var(--gold); /* Ширина обводки и её цвет */
+  text-stroke: 1px var(--gold); /* Для поддержки в Firefox и других браузерах */
+}
+
 .about__desc-our-mission {
   font-size: 18px;
   font-weight: 500;
+  margin-bottom: 40px;
 }
 
 .about__photo {
@@ -30,7 +54,14 @@
   border-radius: 4px;
   object-fit: cover;
 }
-
+.about__desc-card {
+  margin-bottom: 40px;
+}
+.about__desc-card-two {
+  margin-bottom: 40px;
+  border-radius: 4px;
+  background-color: var(--black-90);
+}
 @media screen and (min-width: 768px) {
   .about {
     padding-top: 80px;
@@ -43,31 +74,40 @@
     font-size: 24px;
   }
   .about__photo {
-    min-width: 332px;
-    min-height: 271px;
+    min-width: 352px;
+    min-height: 380px;
   }
   .about__desc-card {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 40px;
-  }
-
-  .about__desc-card > * {
-    flex: 1 1 calc(50% - 20px);
-    max-width: calc(50% - 20px);
-  }
-  .about__desc-card-two {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 40px;
+  }
+
+  .about__desc-card > * {
+    flex: 1 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+  .about__desc-card-two {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+  }
+  .about__desc-card-three {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .about__desc-card-three > * {
+    flex: 1 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
   }
   .about__desc-card-two > * {
-    flex: 1 1 calc(50% - 20px);
-    max-width: calc(50% - 20px);
+    flex: 1 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
   }
   .about__desc {
     margin-top: 0;
@@ -78,6 +118,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-bottom: 0;
   }
   .about__desc-our-mission {
     margin-bottom: 40px;
@@ -86,17 +127,23 @@
 
 @media screen and (min-width: 1200px) {
   .about__photo {
-    min-width: 570px;
+    // min-width: 580px;
     min-height: 500px;
-  }
-  .about__desc-card {
-    flex-direction: row;
-  }
-  .about__desc-card-two {
-    flex-direction: row-reverse;
   }
   .about {
     padding-top: 100px;
     padding-bottom: 100px;
+  }
+  .about__desc-card > * {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+  .about__desc-card-three > * {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+  .about__desc-card-two > * {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
   }
 }
