@@ -6,7 +6,6 @@ $(document).ready(function () {
     dots: false,
     focusOnSelect: true,
     variableWidth: true,
-    centerMode: true,
     prevArrow:
       '<button class="slick-prev" aria-label="Previous"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="ffd700"  d="M9.292 15.292l10-10c0.093-0.093 0.203-0.167 0.325-0.217s0.252-0.076 0.383-0.076 0.262 0.026 0.383 0.076c0.121 0.050 0.232 0.124 0.325 0.217s0.167 0.203 0.217 0.325c0.050 0.121 0.076 0.252 0.076 0.383s-0.026 0.261-0.076 0.383c-0.050 0.121-0.124 0.232-0.217 0.325l-9.294 9.292 9.294 9.293c0.188 0.188 0.293 0.442 0.293 0.707s-0.105 0.52-0.293 0.707c-0.188 0.188-0.442 0.293-0.707 0.293s-0.52-0.105-0.707-0.293l-10-10c-0.093-0.093-0.167-0.203-0.217-0.325s-0.076-0.252-0.076-0.383c0-0.131 0.026-0.261 0.076-0.383s0.124-0.232 0.217-0.325z"></path></svg></button>',
     nextArrow:
@@ -18,7 +17,6 @@ $(document).ready(function () {
           slidesToShow: 3,
           slidesToScroll: 1,
           variableWidth: true,
-          centerMode: true,
         },
       },
       {
@@ -36,7 +34,9 @@ $(document).ready(function () {
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: false,
-    fade: true,
+    // fade: true,
+    variableWidth: true,
+    centerMode: true,
     asNavFor: '.gallery__slider-small',
     responsive: [
       {
@@ -44,6 +44,8 @@ $(document).ready(function () {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          variableWidth: true,
+          centerMode: true,
         },
       },
     ],
