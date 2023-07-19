@@ -148,6 +148,10 @@
   .gallery__slider-big .slick-slide img {
     width: 794px;
     height: 391px;
+    transition: height var(--transition-dur-and-func);
+  }
+  .gallery__slider-big .slick-track {
+    height: 462px;
   }
   .gallery__slider-big .slick-slide.slick-current img {
     height: 462px;
@@ -159,8 +163,5 @@
   .gallery {
     padding-top: 100px;
     padding-bottom: 144px;
-  }
-  .gallery__slider-big {
-    margin-bottom: 40px;
   }
 }
