@@ -183,6 +183,10 @@
   .header-container {
     height: 94px;
   }
+  header .header-container,
+  header .nav__container {
+    max-width: 1600px;
+  }
   .header-wrapper-adrress {
     display: flex;
     align-items: center;
@@ -214,5 +218,12 @@
   .mobile-social-item:hover .mobile-social-icon,
   .mobile-social-item:focus .mobile-social-icon {
     fill: var(--gold-80);
+  }
+}
+@media screen and (min-width: 1601px) {
+  header .header-container,
+  header .nav__container {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
