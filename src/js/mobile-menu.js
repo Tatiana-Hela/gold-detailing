@@ -1,13 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
   var btnBurger = document.querySelector('.btn-burger');
   var menuOverlay = document.querySelector('.menu-overlay');
-  var btnClose = document.querySelector('.btn-close');
+  var menuItems = document.querySelectorAll('.mobile-menu-list-item'); // Получаем все пункты меню
 
   btnBurger.addEventListener('click', function () {
     menuOverlay.style.display = 'block';
   });
 
-  btnClose.addEventListener('click', function () {
-    menuOverlay.style.display = 'none';
+  menuItems.forEach(function (menuItem) {
+    menuItem.addEventListener('click', function () {
+      menuOverlay.style.display = 'none'; // Скрываем меню при выборе пункта
+    });
   });
 });

@@ -15,6 +15,7 @@
 .hero__photo {
   width: 100%;
   min-height: 314px;
+  object-fit: cover;
 }
 
 @media screen and (min-width: 768px) {
@@ -33,6 +34,7 @@
       url('../images/detailing-hero/hero-tablet.webp');
     background-repeat: no-repeat;
     background-size: cover;
+    height: 436px;
   }
 }
 
@@ -49,6 +51,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 436px;
   }
 }
 
@@ -63,6 +66,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 423px;
   }
 }
 
@@ -79,6 +83,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 423px;
   }
 }
 
@@ -102,39 +107,6 @@
   font-size: 18px;
   font-weight: 400;
 }
-
-// .hero__btn {
-//   color: var(--black-100);
-//   font-size: 16px;
-//   font-weight: 500;
-
-//   margin-top: 16px;
-//   display: flex;
-//   padding: 16px 32px;
-//   justify-content: center;
-//   align-items: center;
-//   border-radius: 40px;
-//   background: var(--gold);
-
-//   &:hover,
-//   &:focus {
-//     background: var(--black-100);
-//     color: var(--gold);
-//   }
-// }
-// .btn-icon {
-//   margin-left: 8px;
-//   display: block;
-//   fill: var(--black-100);
-//   width: 32px;
-//   height: 32px;
-//   transition: fill var(--transition-dur-and-func);
-
-//   .hero__btn:hover &,
-//   .hero__btn:focus & {
-//     fill: var(--gold);
-//   }
-// }
 
 .hero__btn {
   color: var(--black-100);
