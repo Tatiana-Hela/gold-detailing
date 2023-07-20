@@ -12,7 +12,7 @@
   color: var(--gold-80);
 }
 .lounge-zone__icon {
-  fill: var(--gold-80);
+  fill: var(--gold);
 }
 .lounge-zone__desc-first {
   font-size: 18px;
@@ -27,7 +27,6 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  align-self: stretch;
   border-radius: 8px;
   margin-bottom: 40px;
 }
@@ -40,6 +39,9 @@
 .lounge-zone__desc {
   font-size: 16px;
   font-weight: 500;
+}
+.lounge-zone__desc-gold {
+  color: var(--gold);
 }
 .lounge-zone__gallery-big-photo {
   border-radius: 8px;
@@ -124,5 +126,19 @@
   .lounge-zone__gallery-small-photo {
     height: 350px;
     width: 387px;
+  }
+  .lounge-zone__title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+  }
+  .lounge-zone__desc-wrapper {
+    margin-bottom: 0;
+  }
+  .lounge-zone__title {
+    margin-bottom: 0;
   }
 }
