@@ -37,7 +37,6 @@ $(document).ready(function () {
     arrows: false,
     cssEase: 'linear',
     adaptiveHeight: true,
-    mobileFirst: true,
     centerMode: true,
     variableWidth: true,
     asNavFor: '.gallery__slider-small',
