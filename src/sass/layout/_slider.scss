@@ -35,6 +35,7 @@
     flex: 0 0 76%;
     margin: 0;
     min-width: 690px;
+    transition: flex 1s ease;
   }
 
   .slider-car__photo {
@@ -50,5 +51,6 @@
     opacity: 1;
     min-width: 82px;
     height: 700px;
+    transition: opacity 1s ease, min-width 1s ease, height 1s ease;
   }
 }

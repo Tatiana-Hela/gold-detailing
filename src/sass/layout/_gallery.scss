@@ -177,13 +177,13 @@
 @media screen and (min-width: 1200px) {
   .gallery__slider-big .slick-slide img {
     height: 360px;
-    transition: height 1s linear;
+    transition: height 0.5s linear;
   }
 
   .gallery__slider-big .slick-slide.slick-current img {
     height: 462px;
     width: 794px;
-    transition: height 1s linear;
+    transition: height 0.5s linear;
   }
   .gallery__slider-big .slick-track {
     height: 462px;
