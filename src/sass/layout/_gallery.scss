@@ -3,7 +3,7 @@
   padding-bottom: 94px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1600px;
+  max-width: 100%;
 }
 .gallery__title {
   padding-left: 16px;
@@ -29,7 +29,7 @@
   border-radius: 8px;
   cursor: pointer;
   max-width: 100%;
-  transition: transform var(--transition-dur-and-func);
+  transition: transform 1s;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   object-fit: cover;
 }
@@ -38,7 +38,7 @@
   height: 116px;
   flex-shrink: 0;
   opacity: 0.3;
-  transition: opacity var(--transition-dur-and-func);
+  transition: opacity 1s;
   &:hover,
   &:focus {
     opacity: 1;
@@ -62,12 +62,12 @@
 
 .gallery__slider-small .slick-slide {
   margin: 0 10px;
-  transition: transform var(--transition-dur-and-func);
+  transition: transform 1s;
 }
 
 .gallery__slider-big .slick-slide img {
   height: 370px;
-  transition: all var(--transition-dur-and-func);
+  transition: all 1s;
 }
 
 .gallery__slider-big .slick-slide.slick-current img {
@@ -150,12 +150,13 @@
 @media screen and (min-width: 768px) {
   .gallery__slider-big .slick-slide img {
     height: 370px;
-    transition: all var(--transition-dur-and-func);
+    transition: all 1s;
   }
 
   .gallery__slider-big .slick-slide.slick-current img {
     width: 700px;
     height: 446px;
+    transition: all 1s;
   }
   .gallery__slider-big .slick-track {
     height: 446px;
@@ -176,12 +177,13 @@
 @media screen and (min-width: 1200px) {
   .gallery__slider-big .slick-slide img {
     height: 360px;
-    transition: all var(--transition-dur-and-func);
+    transition: height 1s linear;
   }
 
   .gallery__slider-big .slick-slide.slick-current img {
     height: 462px;
     width: 794px;
+    transition: height 1s linear;
   }
   .gallery__slider-big .slick-track {
     height: 462px;
