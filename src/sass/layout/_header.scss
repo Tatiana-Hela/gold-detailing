@@ -159,6 +159,7 @@
     border-top: 1px solid var(--white);
   }
   .nav-menu-list-item {
+    padding: 4px 8px;
     font-size: 16px;
     font-weight: 400;
     cursor: pointer;
@@ -177,16 +178,16 @@
     display: none;
   }
   .nav-menu-list {
-    justify-content: flex-start;
+    justify-content: center;
     gap: 20px;
   }
   .header-container {
     height: 94px;
   }
-  header .header-container,
-  header .nav__container {
-    max-width: 1600px;
-  }
+  // header .header-container,
+  // header .nav__container {
+  //   max-width: 1600px;
+  // }
   .header-wrapper-adrress {
     display: flex;
     align-items: center;
