@@ -83,7 +83,7 @@
   width: auto;
   height: 200px;
   opacity: 0.3;
-  transition: opacity var(--transition-dur-and-func);
+  transition: opacity 1s;
   &:hover,
   &:focus {
     opacity: 1;
