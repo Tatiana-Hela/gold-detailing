@@ -1,0 +1,2 @@
+const e=document.querySelectorAll(".accordion-item");e.forEach(t=>{let c=t.querySelector(".accordion-header"),o=t.querySelector(".accordion-content");c.addEventListener("click",()=>{e.forEach(e=>{e!==t&&(e.classList.remove("active"),e.querySelector(".accordion-content").style.height="0")}),t.classList.toggle("active"),t.classList.contains("active")?o.style.height=o.scrollHeight+"px":o.style.height="0"})});
+//# sourceMappingURL=index.5e218b6a.js.map
