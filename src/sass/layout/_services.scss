@@ -11,7 +11,6 @@
   align-items: flex-start;
   gap: 12px;
   align-self: stretch;
-  margin-bottom: 20px;
 }
 .services__title {
   font-family: Dela Gothic One;
@@ -77,6 +76,9 @@
   font-weight: 700;
 }
 .accordion-header__price {
+  width: 125px;
+  display: flex;
+  justify-content: flex-end;
   margin-left: auto;
   font-size: 14px;
   font-weight: 700;
@@ -210,6 +212,7 @@
     font-size: 24px;
   }
   .accordion-header__price {
+    width: 180px;
     font-size: 24px;
   }
   .accordion-header__icon {
@@ -263,6 +266,9 @@
   }
   .accordion__category-item {
     width: 226px;
+    align-items: baseline;
+  }
+  .accordion__category-list {
     align-items: baseline;
   }
 }
