@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', function () {
   let activeIndex = defaultActiveIndex;
 
   sliderItems.forEach(function (item, index) {
-    item.addEventListener('mouseover', function () {
+    item.addEventListener('click', function () {
       setActiveSlide(index);
     });
 
-    item.addEventListener('focus', function () {
+    item.addEventListener('click', function () {
       setActiveSlide(index);
     });
   });
