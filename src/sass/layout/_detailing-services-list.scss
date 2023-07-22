@@ -11,7 +11,6 @@
   align-items: flex-start;
   gap: 12px;
   align-self: stretch;
-  margin-bottom: 20px;
 }
 .services__title {
   font-family: Dela Gothic One;
@@ -21,19 +20,22 @@
 .services__title-gold {
   color: var(--gold-80);
 }
-.services__desc-wrapper {
+.accordion__title {
+  width: 100%;
   display: flex;
-  padding: 8px;
-  justify-content: center;
+  padding: 8px 0px;
+  justify-content: space-between;
   align-items: center;
-  gap: 10px;
-}
-.services__hot-icon {
-  fill: var(--red);
-}
-.services__desc {
-  font-size: 18px;
-  font-weight: 700;
+  gap: 12px;
+  align-self: stretch;
+
+  color: var(--gold-80);
+  font-size: 24px;
+  font-weight: 500;
+
+  border-bottom: 1px solid var(--gold-80);
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .accordion {
