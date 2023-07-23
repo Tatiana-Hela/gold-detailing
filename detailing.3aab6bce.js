@@ -1,0 +1,2 @@
+!function(){let t=document.querySelectorAll(".nav-menu-list-link");function e(t){let e=this.getAttribute("href").startsWith("#");if(e){t.preventDefault();let e=this.getAttribute("href"),n=document.querySelector(e);if(n){let t=n.getBoundingClientRect().top,e=window.pageYOffset,i=t-e,l=null;requestAnimationFrame(function t(n){var r;l||(l=n);let o=n-l;window.scrollTo(0,(r=o/500)<1?i/2*r*r*r+e:i/2*((r-=2)*r*r+2)+e),o<1e3&&requestAnimationFrame(t)})}}}t.forEach(t=>{t.addEventListener("click",e)})}();
+//# sourceMappingURL=detailing.3aab6bce.js.map
