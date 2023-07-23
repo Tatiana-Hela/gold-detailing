@@ -1,32 +1,26 @@
-// Получаем все ссылки внутри навигации
 const navLinks = document.querySelectorAll('.nav-menu-list-link');
 
-// Добавляем обработчик события для каждой ссылки
 navLinks.forEach(link => {
   link.addEventListener('click', smoothScroll);
 });
 
-// Функция для плавного скролла к секции
 function smoothScroll(event) {
-  // Проверяем, является ли ссылка внутренней (якорь на текущую страницу)
   const isInternalLink = this.getAttribute('href').startsWith('#');
 
-  // Если ссылка внутренняя, отменяем стандартное поведение ссылки и выполняем плавную прокрутку
   if (isInternalLink) {
     event.preventDefault();
 
-    const targetId = this.getAttribute('href'); // Получаем атрибут href ссылки (например, "#about")
-    const targetSection = document.querySelector(targetId); // Получаем элемент секции по id
+    const targetId = this.getAttribute('href');
+    const targetSection = document.querySelector(targetId);
 
     if (targetSection) {
-      const targetPosition = targetSection.getBoundingClientRect().top; // Получаем позицию секции относительно вьюпорта
-      const startPosition = window.pageYOffset; // Текущая позиция скролла
-      const distance = targetPosition - startPosition; // Расстояние, которое нужно прокрутить
+      const targetPosition = targetSection.getBoundingClientRect().top;
+      const startPosition = window.pageYOffset;
+      const distance = targetPosition - startPosition;
 
-      const duration = 1000; // Время анимации в миллисекундах
+      const duration = 1000;
       let startTimestamp = null;
 
-      // Функция анимации прокрутки
       function animation(timestamp) {
         if (!startTimestamp) startTimestamp = timestamp;
         const progress = timestamp - startTimestamp;
@@ -41,7 +35,6 @@ function smoothScroll(event) {
         }
       }
 
-      // Функция для плавной анимации (замедление в начале и в конце)
       function easeInOutCubic(t, b, c, d) {
         t /= d / 2;
         if (t < 1) return (c / 2) * t * t * t + b;
@@ -49,7 +42,6 @@ function smoothScroll(event) {
         return (c / 2) * (t * t * t + 2) + b;
       }
 
-      // Запускаем анимацию прокрутки
       requestAnimationFrame(animation);
     }
   }
