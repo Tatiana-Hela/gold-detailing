@@ -1,0 +1,2 @@
+document.addEventListener("DOMContentLoaded",function(){var e=document.querySelector(".btn-burger"),n=document.querySelector(".btn-close"),t=document.querySelector(".menu-overlay"),c=document.querySelectorAll(".mobile-menu-list-item");e.addEventListener("click",function(){t.style.display="block"}),n.addEventListener("click",function(){t.style.display="none"}),c.forEach(function(e){e.addEventListener("click",function(){t.style.display="none"})})});
+//# sourceMappingURL=detailing.2423b08e.js.map
