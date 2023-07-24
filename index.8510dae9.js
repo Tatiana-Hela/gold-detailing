@@ -1,2 +1,0 @@
-document.addEventListener("DOMContentLoaded",function(){let e=document.querySelectorAll(".slider-car__item");e.forEach(function(e,t){4===t&&e.classList.add("active")});let t=4;function n(n){e.forEach(function(e){e.classList.remove("active")}),e[n].classList.add("active"),t=n}e.forEach(function(e,t){e.addEventListener("click",function(){n(t)}),e.addEventListener("click",function(){n(t)})}),document.addEventListener("keydown",function(c){"ArrowLeft"===c.key&&n(t=(t-1+e.length)%e.length),"ArrowRight"===c.key&&n(t=(t+1)%e.length)})});
-//# sourceMappingURL=index.8510dae9.js.map
