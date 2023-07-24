@@ -64,6 +64,12 @@
     color: var(--gold);
   }
 }
+
+.STO-services__btn.active {
+  border: 2px solid var(--gold-80);
+  color: var(--gold);
+}
+
 .STO-services__btn-icon {
   fill: var(--white);
   transition: fill var(--transition-dur-and-func);
@@ -72,6 +78,9 @@
   .STO-services__btn:hover & {
     fill: var(--gold);
   }
+}
+.STO-services__btn.STO-services__btn.active .STO-services__btn-icon {
+  fill: var(--gold);
 }
 
 @media screen and (min-width: 768px) {
