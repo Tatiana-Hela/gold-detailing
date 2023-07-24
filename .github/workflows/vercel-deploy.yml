@@ -14,10 +14,10 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install dependencies
-        run: yarn install # Здесь можно использовать npm, если ваш проект использует npm
+        run: npm install # Здесь можно использовать npm, если ваш проект использует npm
 
       - name: Build site
-        run: yarn build # Здесь выполняется сборка вашего сайта (пример: yarn build или npm run build)
+        run: npm ci npm run build # Здесь выполняется сборка вашего сайта (пример: yarn build или npm run build)
 
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v20
