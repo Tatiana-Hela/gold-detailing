@@ -1,5 +1,5 @@
 .line {
-  // border-top: 2px solid var(--white);
+  border-top: 2px solid var(--white);
   padding-top: 20px;
   padding-bottom: 18px;
   max-width: 100%;
@@ -8,7 +8,6 @@
   overflow: hidden;
   position: relative;
   height: 60px;
-  background-color: var(--gold);
 }
 
 .line__container {
@@ -34,7 +33,6 @@
 }
 
 .line__item {
-  color: var(--black-100);
   font-size: 16px;
   font-weight: 700;
   position: relative;
@@ -46,7 +44,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: var(--black-100);
+  background-color: var(--gold-80);
   position: absolute;
   top: 50%;
   right: -35px;
