@@ -6,6 +6,8 @@ $(document).ready(function () {
     dots: false,
     centerMode: true,
     focusOnSelect: true,
+    adaptiveHeight: true,
+    mobileFirst: true,
     variableWidth: true,
     cssEase: 'linear',
     prevArrow:
@@ -38,6 +40,7 @@ $(document).ready(function () {
     arrows: false,
     cssEase: 'linear',
     adaptiveHeight: true,
+    mobileFirst: true,
     centerMode: true,
     variableWidth: true,
     asNavFor: '.gallery__slider-small',
