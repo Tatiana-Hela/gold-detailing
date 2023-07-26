@@ -12,6 +12,8 @@
 }
 
 .advantages__item {
+  opacity: 0;
+  transition: opacity 0.5s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -26,6 +28,9 @@
   &:focus {
     background-color: var(--black-gold);
   }
+}
+.advantages__item.show {
+  opacity: 1; /* Когда у карточки есть класс show, она становится видимой */
 }
 
 .advantages__title {
