@@ -12,14 +12,14 @@
   margin-right: auto;
 }
 
-.hero__photo {
+.hero__photo-detailing {
   width: 100%;
   min-height: 314px;
   object-fit: cover;
 }
 
 @media screen and (min-width: 768px) {
-  .hero__photo {
+  .hero__photo-detailing {
     display: none;
   }
 }
