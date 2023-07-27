@@ -18,6 +18,7 @@
     "url": "https://github.com/goitacademy/parcel-project-template/issues"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.0.1",
     "modern-normalize": "^2.0.0"
   },
   "devDependencies": {
