@@ -1,0 +1,54 @@
+<section class="call-form">
+    <h2 class="visually-hidden">Call Form</h2>
+    <div class="container">
+        <p class="call-form__desc">
+            Отримайте
+            <span class="call-form__desc-gold">консультацію щодо послуг</span> прямо
+            зараз
+        </p>
+        <form class="call-form__form" id="call-form">
+            <input class="call-form__form-input" type="text" id="name" placeholder="Ваше ім’я*" autocomplete="off" />
+            <div class="input-hint" id="name-hint"></div> <!-- Подсказка для имени -->
+            <input class="call-form__form-input" type="tel" id="phone" placeholder="Номер телефону*"
+                autocomplete="off" />
+            <div class="input-hint" id="phone-hint"></div> <!-- Подсказка для телефона -->
+            <textarea class="call-form__form-textarea" id="message"
+                placeholder="Ваше повідомлення (не обов’язково)"></textarea>
+            <button class="call-form__form-btn" type="submit">Передзвоніть мені</button>
+        </form>
+    </div>
+</section>
+
+<script>
+    const form = document.getElementById('call-form');
+    const nameInput = document.getElementById('name');
+    const phoneInput = document.getElementById('phone');
+    const nameHint = document.getElementById('name-hint');
+    const phoneHint = document.getElementById('phone-hint');
+
+    form.addEventListener('submit', function (event) {
+        let valid = true;
+
+        // Проверка имени
+        const namePattern = /^[а-яА-ЯёЁa-zA-Z\s']+$/;
+        if (!namePattern.test(nameInput.value) || nameInput.value.length < 2) {
+            valid = false;
+            nameHint.textContent = 'Введіть коректне ім\'я (не менше двох букв)';
+        } else {
+            nameHint.textContent = ''; // Очищаем подсказку, если поле корректное
+        }
+
+        // Проверка телефона
+        const phonePattern = /^\+380\d{9}$/;
+        if (!phonePattern.test(phoneInput.value)) {
+            valid = false;
+            phoneHint.textContent = 'Введіть коректний номер телефону (в форматі +380XXXXXXXXX)';
+        } else {
+            phoneHint.textContent = ''; // Очищаем подсказку, если поле корректное
+        }
+
+        if (!valid) {
+            event.preventDefault(); // Отмена отправки формы, если есть некорректные поля
+        }
+    });
+</script>
