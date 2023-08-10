@@ -56,22 +56,73 @@
 
         // Отправка данных на бэкенд с использованием Axios
         try {
-            const response = await axios.post('http://localhost:3000/submit-form', {
+            const response = await axios.post('https://goldetailing-backend.onrender.com/submit-form', {
                 name: nameInput.value,
                 phone: phoneInput.value,
                 message: messageInput.value
             });
 
             if (response.status === 200) {
-                alert('Заявка успешно отправлена');
+                Swal.fire({
+                    icon: 'success',
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                    },
+                    timer: 3000,
+                    title: 'Дякуємо, Ваша заявка прийнята!',
+                    html: '<p class="swal-text">Наш менеджер зв\'яжеться з вами найближчим часом.</p>',
+                    showConfirmButton: false,
+                    customClass: {
+                        title: 'swal-title',
+                        htmlContainer: 'swal-html-container',
+                        popup: 'swal-popup'
+                    }
+                });
                 nameInput.value = '';
                 phoneInput.value = '';
                 messageInput.value = '';
             } else {
-                alert('Произошла ошибка при отправке заявки');
+                Swal.fire({
+                    icon: 'error',
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                    },
+                    timer: 3000,
+                    title: 'Ой-йой .....',
+                    html: '<p class="swal-text">Щось пішло не так, спробуй відправити заявку пізніше.</p>',
+                    showConfirmButton: false,
+                    customClass: {
+                        title: 'swal-title',
+                        htmlContainer: 'swal-html-container',
+                        popup: 'swal-popup'
+                    }
+                });
             }
         } catch (error) {
-            console.error('Произошла ошибка:', error);
+            Swal.fire({
+                icon: 'error',
+                showClass: {
+                    popup: 'animate__animated animate__fadeInDown'
+                },
+                hideClass: {
+                    popup: 'animate__animated animate__fadeOutUp'
+                },
+                // timer: 4000,
+                title: 'Ой-йой.....',
+                html: '<p class="swal-text">Щось пішло не так, спробуй відправити заявку пізніше.</p>',
+                showConfirmButton: false,
+                customClass: {
+                    title: 'swal-title',
+                    htmlContainer: 'swal-html-container',
+                    popup: 'swal-popup'
+                }
+            })
         }
     });
 </script>
