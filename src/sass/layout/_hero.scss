@@ -122,6 +122,8 @@
   color: var(--white);
   font-size: 18px;
   font-weight: 400;
+  text-transform: uppercase;
+  width: 264px;
 }
 
 .hero__btn {
@@ -177,6 +179,7 @@
   .hero__desc {
     margin-bottom: 12px;
     font-size: 24px;
+    width: 100%;
   }
 }
 
@@ -185,8 +188,8 @@
     display: none;
   }
   .hero-container {
-    padding-top: 175px;
-    padding-bottom: 190px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
   .hero__title {
     font-size: 64px;

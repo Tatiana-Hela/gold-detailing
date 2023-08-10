@@ -23,10 +23,13 @@
     const form = document.getElementById('call-form');
     const nameInput = document.getElementById('name');
     const phoneInput = document.getElementById('phone');
+    const messageInput = document.getElementById('message');
     const nameHint = document.getElementById('name-hint');
     const phoneHint = document.getElementById('phone-hint');
 
-    form.addEventListener('submit', function (event) {
+    form.addEventListener('submit', async function (event) {
+        event.preventDefault();
+
         let valid = true;
 
         // Проверка имени
@@ -35,20 +38,40 @@
             valid = false;
             nameHint.textContent = 'Введіть коректне ім\'я (не менше двох букв)';
         } else {
-            nameHint.textContent = ''; // Очищаем подсказку, если поле корректное
+            nameHint.textContent = '';
         }
 
         // Проверка телефона
         const phonePattern = /^\+380\d{9}$/;
         if (!phonePattern.test(phoneInput.value)) {
             valid = false;
-            phoneHint.textContent = 'Введіть коректний номер телефону (в форматі +380XXXXXXXXX)';
+            phoneHint.textContent = 'Введіть коректний номер телефону (в форматі +380-XX-XXX-XX-XX)';
         } else {
-            phoneHint.textContent = ''; // Очищаем подсказку, если поле корректное
+            phoneHint.textContent = '';
         }
 
         if (!valid) {
-            event.preventDefault(); // Отмена отправки формы, если есть некорректные поля
+            return;
+        }
+
+        // Отправка данных на бэкенд с использованием Axios
+        try {
+            const response = await axios.post('http://localhost:3000/submit-form', {
+                name: nameInput.value,
+                phone: phoneInput.value,
+                message: messageInput.value
+            });
+
+            if (response.status === 200) {
+                alert('Заявка успешно отправлена');
+                nameInput.value = '';
+                phoneInput.value = '';
+                messageInput.value = '';
+            } else {
+                alert('Произошла ошибка при отправке заявки');
+            }
+        } catch (error) {
+            console.error('Произошла ошибка:', error);
         }
     });
 </script>

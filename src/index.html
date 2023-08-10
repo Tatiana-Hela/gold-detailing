@@ -18,9 +18,11 @@
 
   <link rel="stylesheet" href="./sass/index.scss" />
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/jpg" />
+
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GRN8NT1D59"></script>
-  <script>
+  <script type="module">
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       dataLayer.push(arguments);
@@ -41,13 +43,13 @@
   <include src="./partials/about.html"></include>
   <include src="./partials/services.html"></include>
   <include src="./partials/call-form.html"></include>
-  <include src="./partials/partners.html"></include>
-  <include src="./partials/gallery.html"></include>
   <include src="./partials/STO-services.html"></include>
-  <include src="./partials/consultation.html"></include>
   <include src="./partials/lounge-zone.html"></include>
-  <include src="./partials/reviews.html"></include>
   <include src="./partials/social-media.html"></include>
+  <include src="./partials/gallery.html"></include>
+  <include src="./partials/reviews.html"></include>
+  <include src="./partials/partners.html"></include>
+  <include src="./partials/consultation.html"></include>
   <include src="./partials/footer.html"></include>
 
   <a href="#" id="toTop"></a>
@@ -55,9 +57,14 @@
   <script type="module" src="./index.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
   <script>
     AOS.init();
   </script>
+
+
 </body>
 
 </html>
