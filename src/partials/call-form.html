@@ -7,9 +7,10 @@
             зараз
         </p>
         <form class="call-form__form" id="call-form">
-            <input class="call-form__form-input" type="text" id="name" placeholder="Ваше ім’я*" />
+            <input class="call-form__form-input" type="text" id="name" placeholder="Ваше ім’я*" autocomplete="off" />
             <div class="input-hint" id="name-hint"></div> <!-- Подсказка для имени -->
-            <input class="call-form__form-input" type="tel" id="phone" placeholder="Номер телефону*" />
+            <input class="call-form__form-input" type="tel" id="phone" placeholder="Номер телефону*"
+                autocomplete="off" />
             <div class="input-hint" id="phone-hint"></div> <!-- Подсказка для телефона -->
             <textarea class="call-form__form-textarea" id="message"
                 placeholder="Ваше повідомлення (не обов’язково)"></textarea>
@@ -47,7 +48,7 @@
 
         if (!phonePattern.test(phoneInput.value) || phoneInput.value.length < minLength || phoneInput.value.length > maxLength) {
             valid = false;
-            phoneHint.textContent = `Введіть коректний номер телефону довжиною від ${minLength} до ${maxLength} цифр, допускається символ "+".`;
+            phoneHint.textContent = `Введіть коректний номер телефону (приклад - +380ХХХХХХХХХ).`;
         } else {
             phoneHint.textContent = '';
         }
