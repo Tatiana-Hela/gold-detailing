@@ -7,16 +7,15 @@
             зараз
         </p>
         <form class="call-form__form" id="call-form">
-            <input class="call-form__form-input" type="text" id="name" placeholder="Ваше ім’я*" autocomplete="off" />
+            <input class="call-form__form-input" type="text" id="name" placeholder="Ваше ім’я*" />
             <div class="input-hint" id="name-hint"></div> <!-- Подсказка для имени -->
-            <input class="call-form__form-input" type="tel" id="phone" placeholder="Номер телефону*"
-                autocomplete="off" />
+            <input class="call-form__form-input" type="tel" id="phone" placeholder="Номер телефону*" />
             <div class="input-hint" id="phone-hint"></div> <!-- Подсказка для телефона -->
             <textarea class="call-form__form-textarea" id="message"
                 placeholder="Ваше повідомлення (не обов’язково)"></textarea>
             <button class="call-form__form-btn" type="submit">Передзвоніть мені</button>
         </form>
-    </div>
+
 </section>
 
 <script>
@@ -42,21 +41,23 @@
         }
 
         // Проверка телефона
-        const phonePattern = /^\+380\d{9}$/;
-        if (!phonePattern.test(phoneInput.value)) {
+        const phonePattern = /^\+?\d{10,13}$/;
+        const minLength = 10;
+        const maxLength = 13;
+
+        if (!phonePattern.test(phoneInput.value) || phoneInput.value.length < minLength || phoneInput.value.length > maxLength) {
             valid = false;
-            phoneHint.textContent = 'Введіть коректний номер телефону (в форматі +380-XX-XXX-XX-XX)';
+            phoneHint.textContent = `Введіть коректний номер телефону довжиною від ${minLength} до ${maxLength} цифр, допускається символ "+".`;
         } else {
             phoneHint.textContent = '';
         }
-
         if (!valid) {
             return;
         }
 
         // Отправка данных на бэкенд с использованием Axios
         try {
-            const response = await axios.post('https://goldetailing-backend.onrender.com/submit-form', {
+            const response = await axios.post('https://golddetailing-backend.onrender.com/submit-form', {
                 name: nameInput.value,
                 phone: phoneInput.value,
                 message: messageInput.value
@@ -64,63 +65,60 @@
 
             if (response.status === 200) {
                 Swal.fire({
-                    icon: 'success',
-                    showClass: {
-                        popup: 'animate__animated animate__fadeInDown'
-                    },
-                    hideClass: {
-                        popup: 'animate__animated animate__fadeOutUp'
-                    },
-                    timer: 3000,
-                    title: 'Дякуємо, Ваша заявка прийнята!',
-                    html: '<p class="swal-text">Наш менеджер зв\'яжеться з вами найближчим часом.</p>',
-                    showConfirmButton: false,
+                    imageUrl: 'https://i.imgur.com/xItRRqf.png',
+                    imageWidth: 250,
+                    imageHeight: 90,
+                    title: 'Дякуємо за звернення!',
+                    html: '<p class="swal-text">Ми зв’яжемось з Вами впродовж <br/> <span class="swal-text-secondary"> 5ти хвилин </span></p>',
+                    showConfirmButton: true,
+                    showCloseButton: true,
+                    confirmButtonText: 'Ок',
                     customClass: {
-                        title: 'swal-title',
+                        title: 'swal-title-ok',
                         htmlContainer: 'swal-html-container',
-                        popup: 'swal-popup'
+                        popup: 'swal-popup-custom',
+                        showConfirmButton: 'swal-confirm-btn',
+                        backdrop: 'swal-backdrop',
                     }
-                });
+                })
                 nameInput.value = '';
                 phoneInput.value = '';
                 messageInput.value = '';
             } else {
                 Swal.fire({
-                    icon: 'error',
-                    showClass: {
-                        popup: 'animate__animated animate__fadeInDown'
-                    },
-                    hideClass: {
-                        popup: 'animate__animated animate__fadeOutUp'
-                    },
-                    timer: 3000,
-                    title: 'Ой-йой .....',
-                    html: '<p class="swal-text">Щось пішло не так, спробуй відправити заявку пізніше.</p>',
-                    showConfirmButton: false,
+                    imageUrl: 'https://i.imgur.com/te0KfzL.png',
+                    imageWidth: 250,
+                    imageHeight: 90,
+                    title: 'Щось пішло не так :(',
+                    html: '<p class="swal-text">Потрібно спробувати ще, або...</p> <p class="swal-text">Ви можете написати нам в <a class="swal-text-link" href="https://web.telegram.org/a/#5530926461" target="_blank" rel="noopener noreferrer">Телеграм</a></p>',
+                    showConfirmButton: true,
+                    showCloseButton: true,
+                    confirmButtonText: 'Відправити повторно',
                     customClass: {
                         title: 'swal-title',
                         htmlContainer: 'swal-html-container',
-                        popup: 'swal-popup'
+                        popup: 'swal-popup-custom',
+                        showConfirmButton: 'swal-confirm-btn',
+                        backdrop: 'swal-backdrop',
                     }
-                });
+                })
             }
         } catch (error) {
             Swal.fire({
-                icon: 'error',
-                showClass: {
-                    popup: 'animate__animated animate__fadeInDown'
-                },
-                hideClass: {
-                    popup: 'animate__animated animate__fadeOutUp'
-                },
-                // timer: 4000,
-                title: 'Ой-йой.....',
-                html: '<p class="swal-text">Щось пішло не так, спробуй відправити заявку пізніше.</p>',
-                showConfirmButton: false,
+                imageUrl: 'https://i.imgur.com/te0KfzL.png',
+                imageWidth: 250,
+                imageHeight: 90,
+                title: 'Щось пішло не так :(',
+                html: '<p class="swal-text">Потрібно спробувати ще, або...</p> <p class="swal-text">Ви можете написати нам в <a class="swal-text-link" href="https://web.telegram.org/a/#5530926461" target="_blank" rel="noopener noreferrer">Телеграм</a></p>',
+                showConfirmButton: true,
+                showCloseButton: true,
+                confirmButtonText: 'Відправити повторно',
                 customClass: {
                     title: 'swal-title',
                     htmlContainer: 'swal-html-container',
-                    popup: 'swal-popup'
+                    popup: 'swal-popup-custom',
+                    showConfirmButton: 'swal-confirm-btn',
+                    backdrop: 'swal-backdrop',
                 }
             })
         }

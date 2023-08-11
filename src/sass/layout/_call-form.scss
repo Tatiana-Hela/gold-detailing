@@ -1,24 +1,110 @@
 .swal-title {
   color: var(--gold);
+  font-family: Inter;
   font-size: 24px;
-  margin-bottom: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 0;
 }
-
+.swal-title-ok {
+  color: var(--gold);
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 0;
+  margin-bottom: 30px;
+}
+.swal2-backdrop-show {
+  background: rgba(217, 217, 217, 0.1);
+  box-shadow: 4px -8px 40px 2px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(100px);
+}
 .swal-html-container {
   text-align: center;
 }
 
-.swal-popup {
-  background-color: var(--black-90);
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+.swal2-image {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.swal2-close {
+  color: var(--white);
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.swal-popup-custom {
+  height: 443px;
+  display: flex;
+  padding: 40px 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 8px;
+  background: linear-gradient(
+    172deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  box-shadow: 4px -8px 20px 2px rgba(0, 0, 0, 0.2),
+    0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(100px);
 }
 
 .swal-text {
-  font-size: 18px;
-  margin-bottom: 10px;
   color: var(--white);
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 0;
+}
+.swal-text-secondary {
+  font-size: 24px;
+  font-weight: 500;
+}
+.swal-text-link {
+  color: var(--gold);
+  text-decoration: underline;
+}
+.swal2-actions .swal2-confirm.swal2-styled {
+  margin-top: 30px;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}
+.swal2-confirm.swal2-styled {
+  width: 247px;
+  display: flex;
+  padding: 20px 24px;
+  justify-content: center;
+  background-color: transparent;
+  align-items: center;
+  gap: 12px;
+  align-self: stretch;
+  border-radius: 40px;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 }
 
 .call-form__section {
