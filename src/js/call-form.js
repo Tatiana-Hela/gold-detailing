@@ -48,14 +48,20 @@ form.addEventListener('submit', async function (event) {
   }
 
   // Проверка телефона
-  const phonePattern = /^\+380\d{9}$/; // Изменен паттерн для номера телефона
-  if (!phonePattern.test(phoneInput.value)) {
+  const phonePattern = /^\+?\d{10,13}$/;
+  const minLength = 10;
+  const maxLength = 13;
+
+  if (
+    !phonePattern.test(phoneInput.value) ||
+    phoneInput.value.length < minLength ||
+    phoneInput.value.length > maxLength
+  ) {
     valid = false;
     phoneHint.textContent = `Введіть коректний номер телефону (приклад - +380ХХХХХХХХХ).`;
   } else {
     phoneHint.textContent = '';
   }
-
   if (!valid) {
     return;
   }

@@ -18,11 +18,9 @@
   font-weight: 400;
 }
 .services__title-gold {
-  color: var(--gold-80);
+  color: var(--gold);
 }
-.services__title-gold {
-  color: var(--gold-80);
-}
+
 .accordion__title {
   width: 100%;
   display: flex;
@@ -269,6 +267,14 @@
     }
   }
   .accordion-header__title {
+    color: var(--white);
+    transition: color 0.3s ease;
+    .accordion-header:hover &,
+    .accordion-header:focus & {
+      color: var(--black-100);
+    }
+  }
+  .accordion-header__price {
     color: var(--white);
     transition: color 0.3s ease;
     .accordion-header:hover &,

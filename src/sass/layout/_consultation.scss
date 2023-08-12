@@ -14,7 +14,6 @@
   color: var(--black-100);
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 40px;
   display: flex;
   padding: 8px;
   align-items: center;
@@ -77,31 +76,4 @@
       left: 100%;
     }
   }
-}
-
-.consultation-tel {
-  border-radius: 4px;
-  background: var(--black-90);
-  display: flex;
-  padding: 20px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  align-self: stretch;
-}
-.consultation-tel__desc {
-  color: var(--gold);
-  text-align: center;
-  font-size: 24px;
-  font-weight: 500;
-}
-.consultation-tel__phone {
-  font-size: 24px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.consultation-tel__schedule {
-  font-size: 16px;
-  font-weight: 400;
 }
