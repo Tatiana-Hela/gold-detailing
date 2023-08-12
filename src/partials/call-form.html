@@ -9,8 +9,8 @@
         <form class="call-form__form" id="call-form">
             <input class="call-form__form-input" type="text" id="name" placeholder="Ваше ім’я*" autocomplete="off" />
             <div class="input-hint" id="name-hint"></div> <!-- Подсказка для имени -->
-            <input class="call-form__form-input" type="tel" id="phone" placeholder="Номер телефону*"
-                autocomplete="off" />
+            <input class="call-form__form-input" type="tel" id="phone" placeholder="Номер телефону*" autocomplete="off"
+                value="+380" />
             <div class="input-hint" id="phone-hint"></div> <!-- Подсказка для телефона -->
             <textarea class="call-form__form-textarea" id="message"
                 placeholder="Ваше повідомлення (не обов’язково)"></textarea>
@@ -18,110 +18,3 @@
         </form>
 
 </section>
-
-<script>
-    const form = document.getElementById('call-form');
-    const nameInput = document.getElementById('name');
-    const phoneInput = document.getElementById('phone');
-    const messageInput = document.getElementById('message');
-    const nameHint = document.getElementById('name-hint');
-    const phoneHint = document.getElementById('phone-hint');
-
-    form.addEventListener('submit', async function (event) {
-        event.preventDefault();
-
-        let valid = true;
-
-        // Проверка имени
-        const namePattern = /^[а-яА-ЯёЁa-zA-Z\s']+$/;
-        if (!namePattern.test(nameInput.value) || nameInput.value.length < 2) {
-            valid = false;
-            nameHint.textContent = 'Введіть коректне ім\'я (не менше двох букв)';
-        } else {
-            nameHint.textContent = '';
-        }
-
-        // Проверка телефона
-        const phonePattern = /^\+?\d{10,13}$/;
-        const minLength = 10;
-        const maxLength = 13;
-
-        if (!phonePattern.test(phoneInput.value) || phoneInput.value.length < minLength || phoneInput.value.length > maxLength) {
-            valid = false;
-            phoneHint.textContent = `Введіть коректний номер телефону (приклад - +380ХХХХХХХХХ).`;
-        } else {
-            phoneHint.textContent = '';
-        }
-        if (!valid) {
-            return;
-        }
-
-        // Отправка данных на бэкенд с использованием Axios
-        try {
-            const response = await axios.post('https://golddetailing-backend.onrender.com/submit-form', {
-                name: nameInput.value,
-                phone: phoneInput.value,
-                message: messageInput.value
-            });
-
-            if (response.status === 200) {
-                Swal.fire({
-                    imageUrl: 'https://i.imgur.com/xItRRqf.png',
-                    imageWidth: 250,
-                    imageHeight: 90,
-                    title: 'Дякуємо за звернення!',
-                    html: '<p class="swal-text">Ми зв’яжемось з Вами впродовж <br/> <span class="swal-text-secondary"> 5ти хвилин </span></p>',
-                    showConfirmButton: true,
-                    showCloseButton: true,
-                    confirmButtonText: 'Ок',
-                    customClass: {
-                        title: 'swal-title-ok',
-                        htmlContainer: 'swal-html-container',
-                        popup: 'swal-popup-custom',
-                        showConfirmButton: 'swal-confirm-btn',
-                        backdrop: 'swal-backdrop',
-                    }
-                })
-                nameInput.value = '';
-                phoneInput.value = '';
-                messageInput.value = '';
-            } else {
-                Swal.fire({
-                    imageUrl: 'https://i.imgur.com/te0KfzL.png',
-                    imageWidth: 250,
-                    imageHeight: 90,
-                    title: 'Щось пішло не так :(',
-                    html: '<p class="swal-text">Потрібно спробувати ще, або...</p> <p class="swal-text">Ви можете написати нам в <a class="swal-text-link" href="https://web.telegram.org/a/#5530926461" target="_blank" rel="noopener noreferrer">Телеграм</a></p>',
-                    showConfirmButton: true,
-                    showCloseButton: true,
-                    confirmButtonText: 'Відправити повторно',
-                    customClass: {
-                        title: 'swal-title',
-                        htmlContainer: 'swal-html-container',
-                        popup: 'swal-popup-custom',
-                        showConfirmButton: 'swal-confirm-btn',
-                        backdrop: 'swal-backdrop',
-                    }
-                })
-            }
-        } catch (error) {
-            Swal.fire({
-                imageUrl: 'https://i.imgur.com/te0KfzL.png',
-                imageWidth: 250,
-                imageHeight: 90,
-                title: 'Щось пішло не так :(',
-                html: '<p class="swal-text">Потрібно спробувати ще, або...</p> <p class="swal-text">Ви можете написати нам в <a class="swal-text-link" href="https://web.telegram.org/a/#5530926461" target="_blank" rel="noopener noreferrer">Телеграм</a></p>',
-                showConfirmButton: true,
-                showCloseButton: true,
-                confirmButtonText: 'Відправити повторно',
-                customClass: {
-                    title: 'swal-title',
-                    htmlContainer: 'swal-html-container',
-                    popup: 'swal-popup-custom',
-                    showConfirmButton: 'swal-confirm-btn',
-                    backdrop: 'swal-backdrop',
-                }
-            })
-        }
-    });
-</script>

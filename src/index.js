@@ -6,3 +6,4 @@ import './js/reviews-slider';
 import './js/scroll';
 import './js/services';
 import './js/slider-car';
+import './js/call-form';
