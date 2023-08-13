@@ -1,5 +1,6 @@
 <section class="call-form__section">
     <h2 class="visually-hidden">Call Form</h2>
+    <div class="parallax-bg"></div>
     <div class="call-form__container container">
         <p class="call-form__desc">
             Отримайте
@@ -17,4 +18,16 @@
             <button class="call-form__form-btn" type="submit">Передзвоніть мені</button>
         </form>
 
+    </div>
 </section>
+
+<!-- <script>
+    const parallaxBg = document.createElement('div');
+    parallaxBg.classList.add('parallax-bg');
+    document.querySelector('.call-form__section').prepend(parallaxBg);
+
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.pageYOffset;
+        parallaxBg.style.transform = `translateY(-${scrollPosition * 0.4}px)`; // Adjust the multiplier for desired effect
+    });
+</script> -->

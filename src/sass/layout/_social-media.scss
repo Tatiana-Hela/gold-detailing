@@ -28,6 +28,9 @@
   display: flex;
   flex-direction: column;
 }
+.social-media__description-QR {
+  display: none;
+}
 .social-media__description-text {
   font-size: 16px;
   font-weight: 500;
@@ -91,6 +94,11 @@
   .social-media__mockup {
     margin-bottom: 20px;
   }
+  .social-media__button-list {
+    margin-left: auto;
+    margin-right: auto;
+    width: 340px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .social-media {
@@ -111,5 +119,14 @@
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0;
+  }
+  .social-media__button-list {
+    margin-left: 0;
+    margin-right: 0;
+    width: 158px;
+  }
+  .social-media__description-QR {
+    display: flex;
+    margin-bottom: 40px;
   }
 }
