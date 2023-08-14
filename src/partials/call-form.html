@@ -1,6 +1,6 @@
-<section class="call-form__section">
+<section class="call-form__section" id="call-form__section">
     <h2 class="visually-hidden">Call Form</h2>
-    <div class="parallax-bg"></div>
+    <div class="parallax-bg" id="parallax-bg"></div>
     <div class="call-form__container container">
         <p class="call-form__desc">
             Отримайте
@@ -9,25 +9,17 @@
         </p>
         <form class="call-form__form" id="call-form">
             <input class="call-form__form-input" type="text" id="name" placeholder="Ваше ім’я*" autocomplete="off" />
-            <div class="input-hint" id="name-hint"></div> <!-- Подсказка для имени -->
+            <div class="input-hint" id="name-hint"></div>
+            <!-- Подсказка для имени -->
             <input class="call-form__form-input" type="tel" id="phone" placeholder="Номер телефону*" autocomplete="off"
                 value="+380" />
-            <div class="input-hint" id="phone-hint"></div> <!-- Подсказка для телефона -->
+            <div class="input-hint" id="phone-hint"></div>
+            <!-- Подсказка для телефона -->
             <textarea class="call-form__form-textarea" id="message"
                 placeholder="Ваше повідомлення (не обов’язково)"></textarea>
-            <button class="call-form__form-btn" type="submit">Передзвоніть мені</button>
+            <button class="call-form__form-btn" type="submit">
+                Передзвоніть мені
+            </button>
         </form>
-
     </div>
 </section>
-
-<!-- <script>
-    const parallaxBg = document.createElement('div');
-    parallaxBg.classList.add('parallax-bg');
-    document.querySelector('.call-form__section').prepend(parallaxBg);
-
-    window.addEventListener('scroll', () => {
-        const scrollPosition = window.pageYOffset;
-        parallaxBg.style.transform = `translateY(-${scrollPosition * 0.4}px)`; // Adjust the multiplier for desired effect
-    });
-</script> -->
