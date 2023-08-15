@@ -128,9 +128,10 @@
       rgba(0, 0, 0, 0.7) 0%,
       rgba(0, 0, 0, 0.7) 100%
     ),
-    url('../images/call-form/bg-mobile.webp');
+    url('../images/call-form/bg-tablet.webp');
   background-size: cover;
   background-repeat: no-repeat;
+  // background-position: center;
 }
 
 .call-form__desc {
@@ -234,9 +235,8 @@
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .call-form__section {
-    padding-top: 80px;
-    padding-bottom: 80px;
-    // height: 684px;
+    padding-top: 110px;
+    padding-bottom: 100px;
   }
   .parallax-bg {
     background: linear-gradient(
@@ -247,7 +247,6 @@
       url('../images/call-form/bg-tablet.webp');
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
   }
   .call-form__desc {
     font-size: 40px;
@@ -274,7 +273,7 @@
       url('../images/call-form/bg-desktop.webp');
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    // background-attachment: fixed;
   }
   .call-form__desc {
     margin-bottom: 0;
