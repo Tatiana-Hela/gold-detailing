@@ -55,6 +55,20 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+
+    <script>
+        window.onload = function () {
+            var image = document.getElementsByClassName('thumbnail');
+            new simpleParallax(image, {
+                scale: 1.5,
+                orientation: 'down',
+                overflow: true,
+            });
+        };
+
+    </script>
     <script>
         AOS.init();
     </script>

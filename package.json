@@ -23,6 +23,8 @@
     "twilio": "^4.14.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
     "@parcel/transformer-sass": "^2.9.3",
     "assert": "^2.0.0",
     "buffer": "^6.0.3",
@@ -43,5 +45,5 @@
     "url": "^0.11.1",
     "util": "^0.12.5"
   },
-  "browserslist": "> 0.5%, last 2 versions, not dead"
+  "browserslist": "> 1%, not ie 11, not op_mini all"
 }
