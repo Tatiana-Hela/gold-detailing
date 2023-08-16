@@ -147,7 +147,6 @@
 .call-form__form {
   display: flex;
   padding: 16px;
-  height: 328px;
   flex-direction: column;
   align-items: flex-start;
 
@@ -230,6 +229,7 @@
   }
 }
 .input-hint {
+  margin-bottom: 10px;
   font-size: 14px;
   color: red;
 }
