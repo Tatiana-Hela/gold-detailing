@@ -66,15 +66,13 @@ form.addEventListener('submit', async function (event) {
     return;
   }
 
+  const smsMessage = `${nameInput.value}, ${phoneInput.value} - Повідомлення від клієнта: ${messageInput.value}`;
   // Отправка данных на бэкенд с использованием Axios
   try {
     const response = await axios.post(
-      'https://golddetailing-backend.onrender.com/submit-form',
+      'https://golddetailing-backend.onrender.com/submit-form', // Замените на ваш URL
       {
-        name: nameInput.value,
-        phone: phoneInput.value,
-
-        message: messageInput.value,
+        message: smsMessage,
       }
     );
 
