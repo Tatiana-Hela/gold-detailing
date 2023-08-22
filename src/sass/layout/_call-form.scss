@@ -128,10 +128,9 @@
       rgba(0, 0, 0, 0.7) 0%,
       rgba(0, 0, 0, 0.7) 100%
     ),
-    url('../images/call-form/bg-tablet.webp');
+    url('../images/call-form/bg-mobile.webp');
   background-size: cover;
   background-repeat: no-repeat;
-  // background-position: center;
 }
 
 .call-form__desc {
@@ -158,8 +157,9 @@
     rgba(0, 0, 0, 0.25) 100%
   );
   box-shadow: 4px -8px 40px 2px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(40px);
+  backdrop-filter: blur(100px);
 }
+
 .call-form__form-input {
   display: flex;
   padding: 20px 24px;
@@ -273,7 +273,6 @@
       url('../images/call-form/bg-desktop.webp');
     background-size: cover;
     background-repeat: no-repeat;
-    // background-attachment: fixed;
   }
   .call-form__desc {
     margin-bottom: 0;

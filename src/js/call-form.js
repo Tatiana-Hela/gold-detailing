@@ -32,6 +32,11 @@ phoneInput.addEventListener('blur', function () {
     phoneInput.placeholder = originalPhonePlaceholder; // Восстанавливаем плейсхолдер при пустом поле
   }
 });
+phoneInput.addEventListener('input', function () {
+  if (!phoneInput.value.startsWith('+380')) {
+    phoneInput.value = '+380'; // Восстанавливаем "+380" если пользователь удалил начало
+  }
+});
 
 form.addEventListener('submit', async function (event) {
   event.preventDefault();
@@ -39,7 +44,7 @@ form.addEventListener('submit', async function (event) {
   let valid = true;
 
   // Проверка имени
-  const namePattern = /^[а-яА-ЯёЁa-zA-Z\s']+$/;
+  const namePattern = /^[а-яА-ЯёЁa-zA-ZіІ\s']+$/;
   if (!namePattern.test(nameInput.value) || nameInput.value.length < 2) {
     valid = false;
     nameHint.textContent = "Введіть коректне ім'я (не менше двох букв)";
@@ -49,7 +54,7 @@ form.addEventListener('submit', async function (event) {
 
   // Проверка телефона
   const phonePattern = /^\+?\d{10,13}$/;
-  const minLength = 10;
+  const minLength = 13;
   const maxLength = 13;
 
   if (
