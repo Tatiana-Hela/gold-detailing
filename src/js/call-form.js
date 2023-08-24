@@ -73,6 +73,8 @@ form.addEventListener('submit', async function (event) {
 
   const smsMessage = `${nameInput.value}, ${phoneInput.value} - Повідомлення від клієнта: ${messageInput.value}`;
   // Отправка данных на бэкенд с использованием Axios
+  const overlay = document.getElementById('overlay');
+  overlay.style.visibility = 'visible';
   try {
     const response = await axios.post(
       'https://golddetailing-backend.onrender.com/submit-form', // Замените на ваш URL
@@ -140,5 +142,7 @@ form.addEventListener('submit', async function (event) {
         backdrop: 'swal-backdrop',
       },
     });
+  } finally {
+    overlay.style.visibility = 'hidden';
   }
 });
