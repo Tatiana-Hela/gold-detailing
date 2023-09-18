@@ -84,6 +84,7 @@ form.addEventListener('submit', async function (event) {
     );
 
     if (response.status === 200) {
+      fbq('track', 'Lead');
       Swal.fire({
         imageUrl: 'https://i.imgur.com/xItRRqf.png',
         imageWidth: 250,
