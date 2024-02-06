@@ -18,21 +18,15 @@
   <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KPNJGB37');</script>
+  <!-- End Google Tag Manager -->
   <link rel="stylesheet" href="./sass/index.scss" />
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GRN8NT1D59"></script>
-  <script type="module">
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'G-GRN8NT1D59');
-  </script>
   <!-- Meta Pixel Code -->
   <script>
     !function (f, b, e, v, n, t, s) {
@@ -68,15 +62,20 @@
 
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPNJGB37" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <!-- ❗️❗️❗️ Add partials like so for every page -->
   <include src="./partials/header.html"></include>
   <include src="./partials/hero.html"></include>
   <include src="./partials/line.html"></include>
   <include src="./partials/advantages.html"></include>
   <include src="./partials/slider.html"></include>
-  <include src="./partials/about.html"></include>
   <include src="./partials/services.html"></include>
   <include src="./partials/call-form.html"></include>
+  <include src="./partials/about.html"></include>
   <include src="./partials/STO-services.html"></include>
   <include src="./partials/lounge-zone.html"></include>
   <include src="./partials/social-media.html"></include>
