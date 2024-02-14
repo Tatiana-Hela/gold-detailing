@@ -28,6 +28,12 @@
   &:focus {
     background-color: var(--black-gold);
   }
+
+  &-header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
 }
 .advantages__item.show {
   opacity: 1; /* Когда у карточки есть класс show, она становится видимой */
@@ -70,6 +76,6 @@
   .advantages__item {
     flex-basis: calc(25% - 10px);
     width: 285px;
-    min-height: 324px;
+    min-height: 230px;
   }
 }
