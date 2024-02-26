@@ -7,16 +7,39 @@
             <span class="call-form__desc-gold">консультацію щодо послуг</span> прямо
             зараз
         </p>
+        
         <form class="call-form__form" id="call-form">
-            <input class="call-form__form-input" type="text" id="name" placeholder="Ваше ім’я*" autocomplete="off" />
-            <div class="input-hint" id="name-hint"></div>
+            <input
+                class="call-form__form-input"
+                type="text"
+                id="name"
+                placeholder="Ваше ім’я*"
+                autocomplete="off"
+                name="name"
+            />
             <!-- Подсказка для имени -->
-            <input class="call-form__form-input" type="tel" id="phone" placeholder="Номер телефону*" autocomplete="off"
-                value="+380" />
-            <div class="input-hint" id="phone-hint"></div>
+            <div class="input-hint name-hint"></div>
+            
+            <input
+                class="call-form__form-input"
+                type="tel"
+                id="phone"
+                placeholder="Номер телефону*"
+                autocomplete="off"
+                value="+380"
+                name="phone"
+            />
             <!-- Подсказка для телефона -->
-            <textarea class="call-form__form-textarea" id="message"
-                placeholder="Ваше повідомлення (не обов’язково)"></textarea>
+            <div class="input-hint phone-hint"></div>
+
+            <textarea
+                class="call-form__form-textarea"
+                id="message"
+                placeholder="Ваше повідомлення (не обов’язково)"
+                name="message"
+            >
+            </textarea>
+
             <button class="call-form__form-btn" type="submit">
                 Передзвоніть мені
             </button>
