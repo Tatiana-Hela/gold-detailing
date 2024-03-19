@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   const sliderItems = document.querySelectorAll('.slider-car__item');
-  const defaultActiveIndex = 4;
+  const defaultActiveIndex = 3;
 
   sliderItems.forEach(function (item, index) {
     if (index === defaultActiveIndex) {

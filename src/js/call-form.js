@@ -6,7 +6,7 @@ const showErrorMessage = () => {
     imageWidth: 250,
     imageHeight: 90,
     title: 'Щось пішло не так :(',
-    html: '<p class="swal-text">Потрібно спробувати ще, або...</p> <p class="swal-text">Ви можете написати нам в <a class="swal-text-link" href="https://web.telegram.org/a/#5530926461" target="_blank" rel="noopener noreferrer">Телеграм</a></p>',
+    html: '<p class="swal-text">Потрібно спробувати ще, або...</p> <p class="swal-text">Ви можете написати нам в <a class="swal-text-link" href="https://t.me/Detailing_CarWash" target="_blank" rel="noopener noreferrer">Телеграм</a></p>',
     showConfirmButton: true,
     showCloseButton: true,
     confirmButtonText: 'Відправити повторно',

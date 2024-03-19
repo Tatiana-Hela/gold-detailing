@@ -1,4 +1,4 @@
-.detailing-hero-container {
+.hero-container {
   padding-top: 40px;
   padding-bottom: 50px;
   display: flex;
@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
 }
-.detailing-hero-section {
+.hero-section {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -25,13 +25,13 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .detailing-hero-container {
+  .hero-container {
     background: linear-gradient(
         0deg,
         rgba(0, 0, 0, 0.8) 0%,
         rgba(0, 0, 0, 0.8) 100%
       ),
-      url('../images/detailing-hero/hero-tablet.webp');
+      url('../images/hero/hero-desktop.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 436px;
@@ -41,13 +41,13 @@
 @media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2),
   screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi),
   screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
-  .detailing-hero-container {
+  .hero-container {
     background: linear-gradient(
         0deg,
         rgba(0, 0, 0, 0.8) 0%,
         rgba(0, 0, 0, 0.8) 100%
       ),
-      url('../images/detailing-hero/hero-tablet@2x.webp');
+      url('../images/hero/hero-desktop@2x.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -56,13 +56,13 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .detailing-hero-section {
+  .hero-section {
     background: linear-gradient(
         0deg,
         rgba(0, 0, 0, 0.8) 0%,
         rgba(0, 0, 0, 0.8) 100%
       ),
-      url('../images/detailing-hero/hero-desktop.webp');
+      url('../images/hero/hero-desktop.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -73,13 +73,13 @@
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
   screen and (min-width: 1200px) and (min-resolution: 192dpi),
   screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .detailing-hero-section {
+  .hero-section {
     background: linear-gradient(
         0deg,
         rgba(0, 0, 0, 0.8) 0%,
         rgba(0, 0, 0, 0.8) 100%
       ),
-      url('../images/detailing-hero/hero-desktop@2x.webp');
+      url('../images/hero/hero-desktop@2x.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -141,7 +141,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .detailing-hero-container {
+  .hero-container {
     padding-top: 114px;
     padding-bottom: 80px;
   }
@@ -167,7 +167,7 @@
   .hero__btn {
     display: none;
   }
-  .detailing-hero-container {
+  .hero-container {
     padding-top: 124px;
     padding-bottom: 206px;
   }
