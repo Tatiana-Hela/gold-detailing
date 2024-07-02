@@ -1,0 +1,24 @@
+<section class="hero-section" data-page="polirovka-avto">
+    <div class="hero__photo-container">
+        <picture>
+            <source srcset="
+            ./images/hero/hero-mobile.jpg    1x,
+            ./images/hero/hero-mobile@2x.jpg 2x
+          " />
+            <img class="hero__photo" src="./images/hero/polirovka-avto.jpg" alt="blue car" />
+        </picture>
+    </div>
+
+    <div class="hero-container container" data-page="polirovka-avto">
+        <h1 class="hero__title">
+            Полірування авто в <span class="hero__title-city">Києві</span>
+        </h1>
+        <p class="hero__desc">Дотримання стандартів якості без компромісів</p>
+        <a href="tel:+380943333302"><button id="heroBtn" type="button" class="hero__btn"
+                onclick="this.classList.add('active'); setTimeout(() => this.classList.remove('active'), 800)">
+                Консультація та запис
+                <svg class="btn-icon" width="32px" height="32px">
+                    <use href="./images/icons-sprite.svg#icon-Call"></use>
+                </svg></button></a>
+    </div>
+</section>

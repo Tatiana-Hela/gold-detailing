@@ -56,6 +56,33 @@
       url('../images/hero/hero-desktop.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+
+    &[data-page='keramika-dlya-avto'] {
+      background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.8) 100%
+      ),
+      url('../images/hero/keramika-dlya-avto.jpg');
+    }
+
+    &[data-page='pokleyka-plivky-avto'] {
+      background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.8) 100%
+      ),
+      url('../images/hero/pokleyka-plivky-avto.jpg');
+    }
+
+    &[data-page='polirovka-avto'] {
+      background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.8) 100%
+      ),
+      url('../images/hero/polirovka-avto.jpg');
+    }
   }
 }
 
@@ -72,6 +99,33 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    &[data-page='keramika-dlya-avto'] {
+      background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.8) 100%
+      ),
+      url('../images/hero/keramika-dlya-avto.jpg');
+    }
+
+    &[data-page='pokleyka-plivky-avto'] {
+      background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.8) 100%
+      ),
+      url('../images/hero/pokleyka-plivky-avto.jpg');
+    }
+
+    &[data-page='polirovka-avto'] {
+      background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.8) 100%
+      ),
+      url('../images/hero/polirovka-avto.jpg');
+    }
   }
 }
 
@@ -86,6 +140,33 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    &[data-page='keramika-dlya-avto'] {
+      background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.8) 100%
+      ),
+      url('../images/hero/keramika-dlya-avto.jpg');
+    }
+
+    &[data-page='pokleyka-plivky-avto'] {
+      background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.8) 100%
+      ),
+      url('../images/hero/pokleyka-plivky-avto.jpg');
+    }
+
+    &[data-page='polirovka-avto'] {
+      background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.8) 100%
+      ),
+      url('../images/hero/polirovka-avto.jpg');
+    }
   }
 }
 
@@ -102,6 +183,33 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    &[data-page='keramika-dlya-avto'] {
+      background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.8) 100%
+      ),
+      url('../images/hero/keramika-dlya-avto.jpg');
+    }
+
+    &[data-page='pokleyka-plivky-avto'] {
+      background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.8) 100%
+      ),
+      url('../images/hero/pokleyka-plivky-avto.jpg');
+    }
+
+    &[data-page='polirovka-avto'] {
+      background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.8) 100%
+      ),
+      url('../images/hero/polirovka-avto.jpg');
+    }
   }
 }
 
@@ -114,6 +222,7 @@
   font-family: Dela Gothic One;
   font-weight: 400;
   font-display: swap;
+  text-transform: uppercase;
 }
 .hero__title-city {
   color: var(--white);
